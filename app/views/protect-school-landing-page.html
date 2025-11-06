@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- HERO BANNER -->
+{% block beforeContent %}
+{{ heroBanner(
+"/public/images/protect-your-school-banner.png",
+"Protect your school against cyber attacks",
+"Build a solid understanding of cyber security and take practical steps to strengthen your setting's cyber resilience."
+) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/home.html"
+    },
+    {
+      text: "Protect your school against cyber attacks"
+    }
+  ]
+}) }}
+{% endblock %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+
+<h2> Understand and implement </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/protect-your-school-card-image.jpg",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Our cyber security standards",
+"description": "Explore the standards and learn how to meet them."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/respond-to-attack-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Multi-factor authentication (MFA) ",
+"description": "How MFA works to strengthen your setting’s security."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/respond-to-attack-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "The 3-2-1 backup strategy",
+"description": "Why multiple backups matter and how to pick a platform."
+}
+]
+}) }}
+
+<h2> Key considerations </h2>
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/protect-your-school-card-image.jpg",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Cyber security roles and responsibilities",
+"description": "See the actions all staff should be taking and those that are role specific."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/respond-to-attack-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "What to look for in a cyber security supplier ",
+"description": "How vetting suppliers can help prevent supply chain cyber threats."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/respond-to-attack-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "DfE Risk Protection Arrangement (RPA)",
+"description": "Learn about this alternative to commercial cyber security insurance."
+}
+]
+}) }}
+
+{% endblock %}

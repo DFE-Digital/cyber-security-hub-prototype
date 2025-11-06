@@ -1,0 +1,27 @@
+{% macro heroBanner(imagePath, title, body, buttonText = null, buttonUrl = null) %}
+<section class="dfe-hero-banner dfe-hero-banner--flush">
+  <div class="dfe-hero-banner__image" style="background-image: url('{{ imagePath }}');"></div>
+
+  <div class="dfe-hero-banner__overlay">
+    <div class="govuk-width-container">
+
+      <!-- H1 overlay -->
+      <div class="dfe-hero-banner__text-box dfe-hero-banner__text-box--h1">
+        <h1 class="dfe-hero-banner__title">{{ title | safe }}</h1>
+      </div>
+
+      <!-- Paragraph overlay -->
+      <div class="dfe-hero-banner__text-box dfe-hero-banner__text-box--p">
+        <p class="dfe-hero-banner__body">{{ body }}</p>
+      </div>
+
+      {% if buttonText and buttonUrl %}
+      <div class="dfe-hero-banner__text-box dfe-hero-banner__text-box--p">
+        <a href="{{ buttonUrl }}" class="govuk-button">{{ buttonText }}</a>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+{% endmacro %}

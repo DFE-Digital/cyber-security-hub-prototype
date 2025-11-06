@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- HERO BANNER -->
+{% block beforeContent %}
+{{ heroBanner(
+"/public/images/handle-cyber-attack-banner.png",
+"How to handle a cyber attack",
+"Helping you contain, eradicate and recover from a cyber incident."
+) }}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/home.html"
+    },
+    {
+      text: "How to handle a cyber attack"
+    }
+  ]
+}) }}
+{% endblock %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+
+{{ fullWidthCard(
+  "/public/images/be-response-ready-grey-card.png",
+  "",
+  "Be response ready",
+  "#",
+  "A detailed breakdown of the response process to help your team respond efficiently and minimise impact."
+) }}
+
+
+<h2> Understanding cyber incidents and processes  </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/Introduction-to-cyber-incident-management-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Introduction to cyber incident management and response",
+"description": "Build your understanding of the full process through this detailed overview."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Incident-management-vs-response-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Incident management vs. incident response",
+"description": "Understand the differences between these cyber security terms."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/why-your-school-needs-a-plan-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Why your school needs a response plan",
+"description": "Explore the business justification for having a response plan in place."
+}
+]
+}) }}
+{% endblock %}

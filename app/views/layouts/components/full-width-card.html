@@ -1,0 +1,24 @@
+{% macro fullWidthCard(imagePath, label, title, linkUrl, description) %}
+<section class="dfe-full-width-card">
+  <div class="govuk-width-container">
+    <div class="dfe-full-width-card__inner">
+      <div class="dfe-full-width-card__image" style="background-image: url('{{ imagePath }}');"></div>
+
+      <div class="dfe-full-width-card__content">
+        {% if label %}
+          <p class="dfe-full-width-card__label">{{ label }}</p>
+        {% endif %}
+
+        <h2 class="dfe-full-width-card__title">
+          <a href="{{ linkUrl }}" class="dfe-full-width-card__link">{{ title }}</a>
+        </h2>
+        <br><br>
+
+        {% if description %}
+          <p class="dfe-full-width-card__description">{{ description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}

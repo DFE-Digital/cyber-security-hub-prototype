@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "govuk-prototype-kit dev",
+    "serve": "govuk-prototype-kit serve",
+    "start": "govuk-prototype-kit start"
+  },
+  "dependencies": {
+    "@govuk-prototype-kit/common-templates": "2.0.1",
+    "@ministryofjustice/frontend": "^7.1.0",
+    "dfe-frontend": "^2.0.1",
+    "dfe-frontend-alpha": "^0.0.6",
+    "govuk-frontend": "5.11.2",
+    "govuk-prototype-kit": "13.18.0"
+  }
+}

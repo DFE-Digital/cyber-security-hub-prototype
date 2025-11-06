@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- HERO BANNER -->
+{% block beforeContent %}
+{{ heroBanner(
+"/public/images/home-page-banner.png",
+"Welcome to the <br> Cyber Security Hub",
+"All the cyber security resources your school needs, in one trusted place."
+) }}
+{% endblock %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+
+<p class="govuk-body-l">Explore our resources by selecting an area of focus below.</p>
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/i-want-to-protect-my-schools-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/protect-school-landing-page.html",
+"openInNewTab": false,
+"heading": "I want to protect my school against cyber attacks"
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/i-want-to-know-how-to-handle-cyber-attack-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/respond-to-attack-landing-page.html",
+"openInNewTab": false,
+"heading": "I want to know how to handle a cyber attack"
+}
+]
+}) }}
+{% endblock %}
