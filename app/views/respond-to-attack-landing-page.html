@@ -1,5 +1,7 @@
 {% extends "layouts/main.html" %}
 {% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
 
 {% block pageTitle %}
 {{ serviceName }} – GOV.UK Prototype Kit
@@ -28,9 +30,6 @@
 
 <!-- BODY CONTENT -->
 {% block content %}
-{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
-
-{% from "layouts/components/full-width-card.html" import fullWidthCard %}
 
 {{ fullWidthCard(
   "/public/images/be-response-ready-grey-card.png",
@@ -80,4 +79,93 @@ cards: [
 }
 ]
 }) }}
+
+<h2> Being one step ahead  </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/preparing-for-cyber-incident-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Preparing for a cyber incident",
+"description": "Learn how to be prepared for quick, effective incident response."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/The-different-types-of-incidents-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "The different types of incidents",
+"description": "Guidance for identifying incidents from symptoms and indicators."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/create-cyber-response-plan-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Create your cyber response plan",
+"description": "Tailor this template for your setting to build a response plan that works."
+}
+]
+}) }}
+
+<h2> Key considerations  </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/Assessing-the-impact-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Assessing the impact the incident may have",
+"description": "Support in assessing an incident’s scope to help you choose an appropriate response."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/keeping-a-record-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Keeping a record of any incidents that occur",
+"description": "Find out how clear documentation supports compliance and provides protection."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/managing-incidents-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Managing incidents with fully sourced IT",
+"description": "Understand your setting’s responsibilities when using a third-party provider."
+}
+]
+}) }}
+
+{{ fullWidthCard(
+  "/public/images/playbooks-grey-card.png",
+  "",
+  "Let our playbooks lead your attack response",
+  "#",
+  "Incident-specific support to guide you through each stage of the response process."
+) }}
+
 {% endblock %}

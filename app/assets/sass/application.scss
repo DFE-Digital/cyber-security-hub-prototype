@@ -187,6 +187,94 @@
   }
 }
 
+/* === Page Intro Banner === */
+.dfe-page-intro-banner {
+  background-color: #EAF5FF; /* Light DfE blue */
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  padding: 3rem 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 1.5rem;
+    margin-top: -2.0rem;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0b0c0c;
+    margin-bottom: 1rem;
+  }
+
+  &__body {
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    color: #0b0c0c;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__body {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* === DfE Blue Content Box === */
+.dfe-blue-content-box {
+  background-color: #EAF5FF;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  .govuk-heading-l,
+  .govuk-heading-m,
+  .govuk-heading-s {
+    margin-top: 0;
+    color: #0b0c0c;
+  }
+
+  .govuk-body,
+  .govuk-list {
+    color: #0b0c0c;
+  }
+
+  .govuk-list--bullet {
+    margin-top: 1rem;
+  }
+
+  .govuk-list--number {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* === GOV.UK / DfE Header Search Alignment === */
 
 .dfe-header__inner {

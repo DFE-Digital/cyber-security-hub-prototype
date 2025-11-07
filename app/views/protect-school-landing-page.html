@@ -1,5 +1,7 @@
 {% extends "layouts/main.html" %}
 {% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 
 {% block pageTitle %}
 {{ serviceName }} – GOV.UK Prototype Kit
@@ -15,21 +17,20 @@
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "/home.html"
-    },
-    {
-      text: "Protect your school against cyber attacks"
-    }
-  ]
+items: [
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "Protect your school against cyber attacks"
+}
+]
 }) }}
 {% endblock %}
 
 <!-- BODY CONTENT -->
 {% block content %}
-{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 
 <h2> Understand and implement </h2>
 
@@ -37,18 +38,18 @@
 cards: [
 {
 "imageCard": true,
-"imagePath": "/public/images/protect-your-school-card-image.jpg",
+"imagePath": "/public/images/cyber-standards-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
-"link": "#",
+"link": "/sub-pages/our-cyber-standards.html",
 "openInNewTab": false,
 "heading": "Our cyber security standards",
 "description": "Explore the standards and learn how to meet them."
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/respond-to-attack-card-image.png",
+"imagePath": "/public/images/MFA-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
@@ -59,7 +60,7 @@ cards: [
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/respond-to-attack-card-image.png",
+"imagePath": "/public/images/321-backup-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
@@ -70,13 +71,22 @@ cards: [
 }
 ]
 }) }}
+<br>
+{{ fullWidthCard(
+"/public/images/case-studies-grey-card.png",
+"",
+"Case studies",
+"#",
+"Learn from real-life examples of how schools responded to cyber incidents."
+) }}
+<br>
 
 <h2> Key considerations </h2>
 {{ card({
 cards: [
 {
 "imageCard": true,
-"imagePath": "/public/images/protect-your-school-card-image.jpg",
+"imagePath": "/public/images/roles-and-responsibilities-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
@@ -87,7 +97,7 @@ cards: [
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/respond-to-attack-card-image.png",
+"imagePath": "/public/images/what-to-look-for-in-supplier-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
@@ -98,7 +108,7 @@ cards: [
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/respond-to-attack-card-image.png",
+"imagePath": "/public/images/risk-protection-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
@@ -106,6 +116,55 @@ cards: [
 "openInNewTab": false,
 "heading": "DfE Risk Protection Arrangement (RPA)",
 "description": "Learn about this alternative to commercial cyber security insurance."
+}
+]
+}) }}
+
+<br>
+{{ fullWidthCard(
+"/public/images/printables-grey-card.png",
+"",
+"Free printables",
+"#",
+"Promote cyber security awareness in your school with these checklists and posters."
+) }}
+<br>
+
+<h2> Services and initiatives we recommend </h2>
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/plan-your-tech-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Plan technology for your school",
+"description": "See how this free self-assessment service can help your school meet our cyber standards."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/support-from-NCSC-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "The National Cyber Security Centre",
+"description": "How vetting suppliers can help prevent supply chain cyber threats."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/cyber-essentials-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "#",
+"openInNewTab": false,
+"heading": "Cyber Essentials Certification",
+"description": "Find out more about staying cyber secure with this government-backed scheme."
 }
 ]
 }) }}
