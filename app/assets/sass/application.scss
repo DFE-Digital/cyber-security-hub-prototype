@@ -21,6 +21,26 @@
 //   align-items: flex-start; // left-align contents
 // }
 
+
+/* Make the container flex so cards line up side by side */
+.two-cards-full-width {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* spacing between cards */
+}
+
+/* Each card takes 50% minus gap */
+.two-cards-full-width .dfe-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    box-sizing: border-box; /* ensure padding/margin doesn't break width */
+}
+
+
+
+
+
+
 .dfe-hero-banner {
   position: relative;
   width: 100vw; // full viewport width
