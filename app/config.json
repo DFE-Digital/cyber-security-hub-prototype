@@ -1,5 +1,5 @@
 {
-  "serviceName": "Education Sector Cyber Security Hub",
+  "serviceName": "Cyber Security Hub",
   "plugins": {
     "govuk-frontend": {
       "rebrand": true
