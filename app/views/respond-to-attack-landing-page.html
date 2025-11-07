@@ -1,6 +1,7 @@
 {% extends "layouts/main.html" %}
 {% from "layouts/components/hero-banner.html" import heroBanner %}
 {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/info-row.html" import infoRow %}
 {% from "layouts/components/full-width-card.html" import fullWidthCard %}
 
 {% block pageTitle %}
@@ -16,15 +17,15 @@
 ) }}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "/home.html"
-    },
-    {
-      text: "How to handle a cyber attack"
-    }
-  ]
+items: [
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "How to handle a cyber attack"
+}
+]
 }) }}
 {% endblock %}
 
@@ -32,17 +33,17 @@
 {% block content %}
 
 {{ fullWidthCard(
-  "/public/images/be-response-ready-grey-card.png",
-  "",
-  "Be response ready",
-  "#",
-  "A detailed breakdown of the response process to help your team respond efficiently and minimise impact."
+"/public/images/be-response-ready-grey-card.png",
+"",
+"Be response ready",
+"#",
+"A detailed breakdown of the response process to help your team respond efficiently and minimise impact."
 ) }}
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-<h2> Understanding cyber incidents and processes  </h2>
+<h2> Understanding cyber incidents and processes </h2>
 
 {{ card({
 cards: [
@@ -84,7 +85,7 @@ cards: [
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Being one step ahead  </h2>
+<h2> Being one step ahead </h2>
 
 {{ card({
 cards: [
@@ -126,7 +127,7 @@ cards: [
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Key considerations  </h2>
+<h2> Key considerations </h2>
 
 {{ card({
 cards: [
@@ -169,11 +170,42 @@ cards: [
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 {{ fullWidthCard(
-  "/public/images/playbooks-grey-card.png",
-  "",
-  "Let our playbooks lead your attack response",
-  "/playbooks-landing-page",
-  "Incident-specific support to guide you through each stage of the response process."
+"/public/images/playbooks-grey-card.png",
+"",
+"Let our playbooks lead your attack response",
+"/playbooks-landing-page",
+"Incident-specific support to guide you through each stage of the response process."
 ) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2> Quick links </h2>
+
+{{ infoRow({
+imageSrc: "/public/images/police.png",
+imageAlt: "police",
+heading: "UK Police",
+linkHref: " ",
+bodyText: "Get police guidance on protecting yourself from cyber crime. if you are experiencing a real-time attack or
+are in immediate danger, call 999 now."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/ICO.png",
+imageAlt: "ICO",
+heading: "ICO",
+linkHref: " ",
+bodyText: "Report personal data breaches to the ICO within 72 hours of becoming aware, unless they are unlikely to pose
+a risk to individuals’ rights and freedom."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/Action-Fraud-Logo.png",
+imageAlt: "Action-Fraud-Logo",
+heading: "Action Fraud",
+linkHref: " ",
+bodyText: "Reporting the incident to Action Fraud will provide a crime reference number and the National Fraud
+Intelligence Bureau notified."
+}) }}
 
 {% endblock %}

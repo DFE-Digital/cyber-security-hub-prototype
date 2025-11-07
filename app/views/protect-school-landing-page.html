@@ -1,6 +1,7 @@
 {% extends "layouts/main.html" %}
 {% from "layouts/components/hero-banner.html" import heroBanner %}
 {% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from "layouts/components/info-row.html" import infoRow %}
 {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 
 {% block pageTitle %}
@@ -172,6 +173,44 @@ cards: [
 "description": "Find out more about staying cyber secure with this government-backed scheme."
 }
 ]
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2> Helpful links </h2>
+<p>Explore certifications, organisations and standards that support effective cyber security.</p>
+
+{{ infoRow({
+imageSrc: "/public/images/GOV DFE.png",
+imageAlt: "GOV DFE image",
+heading: "DfE Cyber Security Standards",
+linkHref: " ",
+bodyText: "Tailored for the education sector, these standards support schools and colleges in building cyber
+resilience."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/NCSC.png",
+imageAlt: "NCSC",
+heading: "National Cyber Security Centre",
+linkHref: " ",
+bodyText: "Guidance to help businesses and the public sector protect the online services and devices they depend on."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/Education data hub.png",
+imageAlt: "Education Data Hub",
+heading: "Education Data Hub",
+linkHref: " ",
+bodyText: "A school-focused support service providing support in cyber security, data management and data protection."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/ICO.png",
+imageAlt: "ICO",
+heading: "Information Commissioner’s Office ",
+linkHref: " ",
+bodyText: "Advice to help schools understand data protection principles and cyber security best practice."
 }) }}
 
 {% endblock %}

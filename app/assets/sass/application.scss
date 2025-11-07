@@ -36,6 +36,39 @@
     box-sizing: border-box; /* ensure padding/margin doesn't break width */
 }
 
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* space between image and text */
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.info-row__image {
+  flex: 0 0 auto;
+  width: 200px; /* increased image size */
+}
+
+.info-row__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-row__content {
+  flex: 1 1 auto;
+}
+
+.info-row__content h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem; /* increased spacing below heading */
+}
+
+.info-row__content p {
+  margin-top: 0.4rem; /* slight extra space above paragraph */
+  margin-bottom: 0;
+}
+
 
 
 
