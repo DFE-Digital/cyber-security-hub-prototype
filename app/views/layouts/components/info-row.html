@@ -1,0 +1,16 @@
+{% macro infoRow(params) %}
+  <div class="info-row">
+    <div class="info-row__image">
+      <img src="{{ params.imageSrc }}" alt="{{ params.imageAlt }}">
+    </div>
+
+    <div class="info-row__content">
+      <h3 class="govuk-heading-s">
+        <a href="{{ params.linkHref }}" class="govuk-link govuk-link--no-visited-state">
+          {{ params.heading }}
+        </a>
+      </h3>
+      <p class="govuk-body">{{ params.bodyText }}</p>
+    </div>
+  </div>
+{% endmacro %}

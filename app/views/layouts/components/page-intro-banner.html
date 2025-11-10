@@ -1,0 +1,18 @@
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{% macro pageIntroBanner(title, body, breadcrumbs) %}
+<section class="dfe-page-intro-banner">
+  <div class="govuk-width-container">
+    <div class="dfe-page-intro-banner__content">
+
+      <div class="dfe-page-intro-banner__breadcrumbs">
+        {{ govukBreadcrumbs({ items: breadcrumbs }) }}
+      </div>
+
+      <h1 class="dfe-page-intro-banner__title">{{ title }}</h1>
+      <p class="dfe-page-intro-banner__body">{{ body }}</p>
+
+    </div>
+  </div>
+</section>
+{% endmacro %}

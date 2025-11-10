@@ -1,0 +1,53 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"The different types of incidents",
+" ",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "How to handle a cyber attack",
+href: "/respond-to-attack-landing-page"
+},
+{
+text: "The different types of incidents"
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body"> </p>
+
+        <h2 class="govuk-heading-m"> </h2>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}

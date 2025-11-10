@@ -1,0 +1,77 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"Business Email Compromise (BEC) Playbook ",
+"This playbook offers technical guidance for responding to a ransomware incident, but it is not a standalone resource.
+It must be used alongside your Incident Management Plan to ensure it fits your setting.",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "How to handle a cyber attack",
+href: "/respond-to-attack-landing-page.html"
+},
+{
+text:"Let our playbooks lead your attack response ",
+href:"/playbooks-landing-page"
+},
+{
+text: "BEC Playbook "
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+
+        {{ mojSideNavigation({
+        label: "Side navigation",
+        items: [{
+        text: "Nav item 1",
+        href: "#1"
+        }, {
+        text: "Nav item 2",
+        href: "#2"
+        }, {
+        text: "Nav item 3",
+        href: "#3"
+        }]
+        }) }}
+
+    </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body"> hello</p>
+
+        <h2 class="govuk-heading-m"> hello</h2>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}

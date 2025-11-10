@@ -1,0 +1,98 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"Multi-factor authentication",
+" ",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "Protect your school against cyber attacks",
+href: "/protect-school-landing-page.html"
+},
+{
+text: "Multi-factor authentication"
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-m">What is MFA?</h2>
+
+        <p class="govuk-body">As credentials can be compromised in cyber attacks, including an additional step in the
+            sign in process helps to keep your account secure.
+            <br><br>
+            Multi-factor authentication (MFA) is a process that involves two or more ways of confirming your identity
+            when trying to access an account.
+        </p>
+
+        <h2 class="govuk-heading-m">How does MFA provide protection?</h2>
+        <p>
+            There are many ways hackers can steal usernames and passwords, including through phishing attacks. Once they
+            have your credentials, the hacker may use them to carry out an attack themselves or even sell the details on
+            the dark web.
+            <br><br>
+            Compromised credentials may allow attackers to:
+            <br>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>access staff and student records</li>
+            <li>impersonate staff</li>
+            <li>steal funds</li>
+            <li>use the institution's email to spread malware </li>
+        </ul>
+        </p>
+        <p>
+            Even if a hacker were to obtain your username and password, having MFA enabled would mean they can’t access
+            your account without carrying out the second verification step.
+        </p>
+        <h2 class="govuk-heading-m">How does MFA change the way I access my accounts?</h2>
+        <p>
+            The additional step alongside your credentials could include: 
+            <br>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>approving a request through an authenticator app</li>
+            <li>entering a code sent to your email</li>
+            <li>entering personal information only you know (such as a pin or secret question)</li>
+        </ul>
+        </p>
+        <h2 class="govuk-heading-m">Increasing your account security further</h2>
+        <p>
+            Hackers may also try their hand at simply guessing passwords. To ensure you have a strong password, you
+            should:
+            <br>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>use a minimum of 8 characters</li>
+            <li>use a combination of numbers, symbols and letters  </li>
+            <li>use a mix of upper and lowercase letters </li>
+            <li>avoid using personal information such as places and birthdays </li>
+        </ul>
+        </p>
+
+    </div>
+</div>
+
+
+{% endblock %}

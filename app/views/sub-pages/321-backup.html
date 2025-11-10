@@ -1,0 +1,229 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"Implementing the 3-2-1 backup strategy",
+" ",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "Protect your school against cyber attacks",
+href: "/protect-school-landing-page.html"
+},
+{
+text: "Implementing the 3-2-1 backup strategy"
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body">Improve your school’s cyber security resilience and protect data using the 3-2-1 backup
+            strategy.</p>
+
+        <h2 class="govuk-heading-m">What is the 3-2-1 backup strategy</h2>
+
+        <p class="govuk-body">3-2-1 backup is a data protection strategy that recommends having:
+        <ul class="govuk-list govuk-list--bullet">
+            <li>3 copies of your data (one primary and two backups)</li>
+            <li>2 different forms of storage (such as on-premise and cloud)</li>
+            <li>1 off-site backup (such as a remote data centre or cloud)</li>
+        </ul>
+        </p>
+
+        <h2 class="govuk-heading-m">Why it is important</h2>
+        <p class="govuk-body">The 3-2-1 backups are essential for:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>safeguarding student data </li>
+            <li>operational continuity  </li>
+            <li>compliance  </li>
+        </ul>
+
+        <p class="govuk-body">Following the strategy can mitigate risks such as cyber attacks, accidental deletions,
+            natural disasters and IT failures. In addition, they can help with the continuity of education when
+            needed.</p>
+
+        <p class="govuk-body">These risks include:</p>
+
+        <h3 class="govuk-heading-s">Cyber attacks</h3>
+        <p class="govuk-body">Permanent off-site backups ensure data recovery without having to pay ransom.</p>
+
+        <h3 class="govuk-heading-s">Accidental deletion </h3>
+        <p class="govuk-body">Multiple copies allow fast recovery of files that have been lost due to human error.   
+        </p>
+
+        <h3 class="govuk-heading-s">Server crashes and hardware failure</h3>
+        <p class="govuk-body">Redundant storage options ensure minimal disruption. </p>
+
+        <h3 class="govuk-heading-s">Cloud service outages  </h3>
+        <p class="govuk-body">Local backups provide access even if cloud services fail. </p>
+
+        <h3 class="govuk-heading-s">Natural disasters (such as fire and floods)  </h3>
+        <p class="govuk-body">Off-site backups ensure data is protected from local disasters.  </p>
+
+        <h2 class="govuk-heading-m">Choosing a platform for backing up  </h2>
+
+        <p>Before selecting a platform for your backups, you should be aware that Microsoft and most cloud services
+            operate
+            on a shared responsibility model.
+             </p>
+        <p>
+            This means they ensure their platform availability, but this does not fully protect you from data loss due
+            to
+            accidental deletion, cyber attacks, or compliance issues.   
+             </p>
+        <p>
+            Microsoft provides guidance on its backup functions.   
+             </p>
+        <p>
+            Unlike traditional on-premises infrastructure, cloud environments present unique challenges, such as:   
+             </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>limited built-in retention, for example, deleted files are only retained for 93 days in SharePoint and
+                OneDrive</li>
+            <li>ransomware attacks can encrypt cloud data, including OneDrive and SharePoint files</li>
+            <li>accidental deletions or insider threats leading to data loss that service retention policies cannot
+                recover
+                beyond a certain period</li>
+            <li>legal and compliance requirements such as UK GDPR and Ofsted data requirements which may require
+                long-term
+                retention of sensitive records</li>
+
+        </ul>
+
+        <h2 class="govuk-heading-m">NCSC guidance on backup best practice </h2>
+
+        <p>National Cyber and Security Centre (NCSC) has developed a <a href="#" class="govuk-link">set of “rules” to
+                follow</a> when backing up your data.
+        </p>
+
+        <h2 class="govuk-heading-m">The 3-2-1 Rule </h2>
+
+        <p>NCSC stresses the importance of the 3-2-1 backup strategy, stating it is vital to keep multiple backups and
+            to logically separate them.
+            <br><br>
+            By maintaining resilient backups, if one backup is compromised at least one other remains.
+        </p>
+
+        <h2 class="govuk-heading-m">The Offline Rule: Disconnect at least one backup</h2>
+
+        <p>Keeping one backup offline will prevent ransomware encrypting all backups.
+            <br><br>
+            You should also:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>digitally disconnect cloud backups not in use</li>
+            <li>use separate ID and password credentials for cloud backups</li>
+            <li>restrict access so that only devices specifically authorised by your IT security manager, such as admin
+                workstations, can modify backups</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">The Recovery Rule: Ensure your backups can be restored</h2>
+
+        <p>Schools must confirm that backups are recoverable in case of an attack. When choosing a cloud storage
+            provider, you should ensure that:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the version history is available to restore previous versions of files</li>
+            <li>deleted files can be recovered for a set period after removal</li>
+            <li>regular tests of restoring backups are carried out to ensure data integrity</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">The Regular Rule: Frequent and tested backups</h2>
+
+        <p>The final rule is the frequency of backing up your data. Schools should back up data on a regular and agreed
+            upon schedule to minimise data loss. Backups should be:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>tested frequently to confirm they work as intended</li>
+            <li>automated where possible to ensure consistency </li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Steps for applying 3-2-1 in a cloud-only environment</h2>
+
+        <p>If your school relies on a cloud-based system such as Office 365, the NCSC recommends you still follow the
+            3-2-1 strategy. This will ensure that even if one backup is compromised, others remain intact.  Follow the
+            steps below to implement the strategy.</p>
+
+        <h3 class="govuk-heading-s">Step 1: Identifying and backing up critical data </h3>
+
+        <p>Schools should ensure they identify and back up their most critical data which includes:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>student & staff emails (Exchange Online)</li>
+            <li>files & collaboration documents (OneDrive & SharePoint)</li>
+            <li>Microsoft Teams data (chats, shared files, meeting recordings, Google meets)</li>
+            <li>school administrative data (MIS integration, financial documents)</li>
+            <li>safeguarding records (stored in secure SharePoint sites or OneDrive)</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Step 2: Implement a third-party backup solution for Office 365</h3>
+
+        <p>Since Microsoft does not provide native full backups, it is recommended that a dedicated Microsoft 365 backup
+            solution is used to ensure recoverability.
+            <br><br>
+            Select a Software as a Service (SaaS) based backup provider that best meets your needs. You should ensure
+            the solution supports:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>automated backups (daily or more frequent)</li>
+            <li>granular recovery (individual emails, Teams messages, SharePoint files)</li>
+            <li>long-term retention (up to 7 years for compliance)</li>
+            <li>immutable storage (protection against ransomware encryption)</li>
+        </ul>
+        <p>Storage options can be either:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>a cloud-to-cloud backup such as backing up M365 data to a separate cloud provider</li>
+            <li>a hybrid approach by storing an encrypted backup locally in a secure Network Attached Storage (NAS) for
+                redundancy</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Step 3: Implement an off-site, air-gapped backup (third Copy - Disaster Recovery
+            Protection)</h3>
+        <p>For true 3-2-1 resilience, store one copy in air-gapped storage that is separate from daily operations. This
+            should have limited accessibility but be reachable when needed.
+            <br><br>
+            Options for air-gapped backups include:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>commercial cloud services with write-once-read-many (WORM) features to ensure ransomware protection</li>
+            <li>physical air-gapped storage (e.g., an offline encrypted external drive updated monthly)</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Further guidance on data backup</h2>
+        <p>The following NCSC guidance provides information on the different types of backups and the importance of:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>offline backups in an online world</li>
+            <li>ransomware-resistant backups</li>
+            <li>using online services safely</li>
+        </ul>
+
+    </div>
+</div>
+
+
+{% endblock %}

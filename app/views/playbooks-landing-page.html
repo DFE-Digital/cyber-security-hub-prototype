@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- HERO BANNER -->
+{% block beforeContent %}
+{{ heroBanner(
+"/public/images/playbooks-grey-card.png",
+"Let our playbooks lead your attack response",
+"Incident-specific processes to handle and eradicate threats."
+) }}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "How to handle a cyber attack",
+href: "/respond-to-attack-landing-page"
+},
+{
+text: "Let our playbooks lead your attack response "
+}
+]
+}) }}
+{% endblock %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+
+
+
+<h2> Playbooks </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/Cyber-awareness.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/intro-to-cyber-incident-and-management",
+"openInNewTab": false,
+"heading": "How to use our playbooks"
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Business-email-compromise.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/playbooks/BEC",
+"openInNewTab": false,
+"heading": "Business Email Compromise (BEC) Playbook "
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Ransomeware.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/playbooks/ransomware",
+"openInNewTab": false,
+"heading": "Ransomware Playbook"
+}
+]
+}) }}
+
+{% endblock %}

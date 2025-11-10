@@ -1,0 +1,85 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"Our cyber security standards",
+" ",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "Protect your school against cyber attacks",
+href: "/protect-school-landing-page.html"
+},
+{
+text: "Our cyber security standards"
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body">The Cyber Security Standards are part of the DFE’s Digital and Technology
+            Standards and set clear expectations for cyber security in education settings.</p>
+
+        <h2 class="govuk-heading-m">Why the standards are important</h2>
+
+        <p class="govuk-body">Cyber security is the safeguarding of systems, networks, and data from cyber
+            attacks. The methods of
+            safeguarding range from advanced technologies such as firewalls and antivirus software, to basic yet
+            essential practices such as backing up data and using strong passwords.<br><br>
+
+            Meeting these standards shows your commitment to delivering resilient education services by reducing
+            the risk of cyber attacks.<br><br>
+
+            Cyber attacks can lead to:
+        <ul class="govuk-list govuk-list--bullet">
+            <li>pupil and staff data loss</li>
+            <li>costly budgets from the unexpected costs of responding to a cyber attack</li>
+            <li>financial loss</li>
+            <li>identity theft</li>
+        </ul>
+        </p>
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>Simple actions to help you meet the standards</h2>
+        <p class='govuk-body'>These 4 actions don’t require a large budget or IT staff, yet can help prevent data loss,
+            unexpected costs of responding to a cyber attack, financial loss and identity theft:</p>
+        <ol class="govuk-list govuk-list--number">
+            <li>Implementing multi-factor authentication</li>
+            <li>Awareness of threats such as ransomware and phishing</li>
+            <li>Ensuring password security</li>
+            <li>Backing up data</li>
+        </ol>
+        <p class='govuk-body'>While these actions can't guarantee complete prevention of an attack, they will reduce the
+            likelihood, lessen the impact, and make incidents easier to manage if they do occur. </p>
+
+        {% endcall %}
+
+
+    </div>
+</div>
+
+
+{% endblock %}
