@@ -5,6 +5,7 @@
 {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 {% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
 {% from "layouts/components/blue-content-box.html" import blueContentBox %}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
 {% block pageTitle %}
 {{ serviceName }} – GOV.UK Prototype Kit
@@ -40,12 +41,178 @@ text: "Cyber security roles and responsibilities"
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> </p>
 
-        <h2 class="govuk-heading-m"> </h2>
+        <h3 class="govuk-heading-s">Cyber security isn’t just a job for IT, it’s everyone’s responsibility to keep  your
+            school safe. 
+        </h3>
+        <p class="govuk-body">Effective cyber security in your school consists of both collective and
+            role-specific responsibilities.  
+            <br><br>
+            If every staff member follows cyber security best practices, the likelihood of a cyber incident is
+            drastically reduced. In the event an incident does occur, there are clearly defined actions assigned to
+            specific job roles.  
+        </p>
+
+        <h2 class="govuk-heading-m">Cyber security tasks for all staff</h2>
+        <p class="govuk-body">Every member of staff within your school should understand and adhere to the key cyber
+            security practices, including: </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>recognising common threats, such as phishing emails and ransomware</li>
+            <li>creating strong, unique passwords</li>
+            <li>only using approved software and services</li>
+            <li>following any cyber security policies in place</li>
+            <li>promptly raising any concerns</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Role-specific responsibilities in the event of an incident</h2>
+        <p class="govuk-body">Understanding the responsibilities of others is crucial to enhancing your school’s
+            communication and the ability to react quickly in the event of a cyber attack.
+            <br><br>
+            Every school is different, therefore staffing and structure can vary. This example outlines the individuals
+            who may take part in responding to an attack and tasks they are likely to carry out.
+        </p>
 
 
+        <h1 class="govuk-heading-l">Responsibilities by role</h1>
 
+        {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+        {
+        heading: {
+        text: "Chair of Governors"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>supporting the Headteacher throughout the process and ensure decisions are based on sound judgement and
+                relevant advice</li>
+            <li>understanding there may be a need to make additional funds available and have a process in place to
+                approve this</li>
+            <li>ensuring all governors are aware of the situation and are advised not to comment to third parties or the
+                media</li>
+            <li>reviewing the response after the incident to consider changes to working practices or school policy</li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "Headteacher"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>ensuring they have all the information from the person who reported the incident</li>
+            <li>setting up and maintaining the incident, including logging times/dates, as well as any actions</li>
+            <li>involving the Cyber Recovery Team, informing them of the incident and enacting the response plan</li>
+            <li>liaise with both the Chair of Governors and the school Data Protection Officer</li>
+            <li>informing and advising staff to follow the ‘script’ when discussing the incident</li>
+            <li>preparing relevant statements/letters for the media, parents and pupils</li>
+            <li>liaising with the School Business Officer if it is required to notify parents</li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "IT Lead / IT Staff"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>verifying the most recent and successful backup</li>
+            <li>liaising with the RPA Incident Response Service to assess whether the backup can be restored or if
+                server(s) themselves are damaged</li>
+            <li>restoring the backup and advise of the backup date and time to inform stakeholders as to potential data
+                loss</li>
+            <li>liaising with the Headteacher as to the likely cost of repair / restore / required hardware purchase
+            </li>
+            <li>providing an estimate of any downtime and advise which systems are affected / unaffected</li>
+            <li>arranging for access to the off-site backup if necessary</li>
+            <li>protecting any records which have not been affected</li>
+            <li>ensuring on-going access to unaffected records</li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "School Business Officer / Manager"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>ensuring phone lines are operative and make mobiles available and, if necessary, effectively
+                communicating numbers to relevant staff.</li>
+            <li>ensuring office staff understand the standard response and know who the media contact within school is
+            </li>
+            <li>contacting relevant external agencies, such as RPA Emergency Assistance / IT services / technical
+                support staff</li>
+            <li>managing the communications, including the website, school emails and calls/texts to parents</li>
+            <li>assessing whether payroll or HR functions are affected and consider if additional support is required
+            </li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "Designated Safeguarding Lead (DSL)"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>asking for clarification as to whether there is a safeguarding aspect to the incident</li>
+            <li>considering whether a referral to Cyber Protect Officers / Early Help / Social Services is required</li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "School staff"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>reassuring pupils, staying within agreed pupil standard response</li>
+            <li>record any relevant information which pupils may provide</li>
+            <li>ensuring any temporary procedures for data storage / IT access are followed</li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "Data Protection Officer (DPO)"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>supporting the school, using the school data map and information asset register to consider whether data
+                has been put at risk, is beyond reach, or lost</li>
+            <li>liaising with the Headteacher / Chair of Governors to determine if a report to the ICO is necessary</li>
+            <li>advising on the appropriateness of any plans for temporary access / systems</li>
+        </ul>'
+        }
+        },
+        {
+        heading: {
+        text: "Site Manager / Caretaker"
+        },
+        content: {
+        html: '<p class="govuk-body">Responsibilities include:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+            <li>ensuring external IT staff have site access</li>
+            <li>liaising with the Headteacher to ensure access is limited to essential personnel</li>
+        </ul>'
+        }
+        }
+        ]
+        }) }}
     </div>
 </div>
 
