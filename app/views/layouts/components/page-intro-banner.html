@@ -1,16 +1,25 @@
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-{% macro pageIntroBanner(title, body, breadcrumbs) %}
+{% macro pageIntroBanner(title, body, breadcrumbs, imagePath="") %}
 <section class="dfe-page-intro-banner">
   <div class="govuk-width-container">
+
+    <div class="dfe-page-intro-banner__breadcrumbs">
+      {{ govukBreadcrumbs({ items: breadcrumbs }) }}
+    </div>
+
     <div class="dfe-page-intro-banner__content">
 
-      <div class="dfe-page-intro-banner__breadcrumbs">
-        {{ govukBreadcrumbs({ items: breadcrumbs }) }}
+      <div class="dfe-page-intro-banner__text">
+        <h1 class="dfe-page-intro-banner__title">{{ title }}</h1>
+        <p class="dfe-page-intro-banner__body">{{ body }}</p>
       </div>
 
-      <h1 class="dfe-page-intro-banner__title">{{ title }}</h1>
-      <p class="dfe-page-intro-banner__body">{{ body }}</p>
+      {% if imagePath %}
+      <div class="dfe-page-intro-banner__image">
+        <img src="{{ imagePath }}" alt="">
+      </div>
+      {% endif %}
 
     </div>
   </div>

@@ -6,11 +6,11 @@
 // Add extra styles here
 @import 'node_modules/dfe-frontend/packages/dfefrontend';
 
-.govuk-header__link .govuk-header__logotype{
+.govuk-header__link .govuk-header__logotype {
   height: 30px;
 }
 
-.govuk-header__link:focus .govuk-header__logotype{
+.govuk-header__link:focus .govuk-header__logotype {
   content: url(/public/images/department-for-education_black.png);
   height: 30px;
 }
@@ -24,29 +24,33 @@
 
 /* Make the container flex so cards line up side by side */
 .two-cards-full-width {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem; /* spacing between cards */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* spacing between cards */
 }
 
 /* Each card takes 50% minus gap */
 .two-cards-full-width .dfe-card {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-    box-sizing: border-box; /* ensure padding/margin doesn't break width */
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+  box-sizing: border-box;
+  /* ensure padding/margin doesn't break width */
 }
 
 .info-row {
   display: flex;
   align-items: flex-start;
-  gap: 2rem; /* space between image and text */
+  gap: 2rem;
+  /* space between image and text */
   padding: 1.5rem 0;
   border-bottom: 1px solid #b1b4b6;
 }
 
 .info-row__image {
   flex: 0 0 auto;
-  width: 200px; /* increased image size */
+  width: 200px;
+  /* increased image size */
 }
 
 .info-row__image img {
@@ -61,17 +65,15 @@
 
 .info-row__content h3 {
   margin-top: 0;
-  margin-bottom: 0.6rem; /* increased spacing below heading */
+  margin-bottom: 0.6rem;
+  /* increased spacing below heading */
 }
 
 .info-row__content p {
-  margin-top: 0.4rem; /* slight extra space above paragraph */
+  margin-top: 0.4rem;
+  /* slight extra space above paragraph */
   margin-bottom: 0;
 }
-
-
-
-
 
 
 .dfe-hero-banner {
@@ -165,7 +167,8 @@
   margin-bottom: 2rem;
 
   .govuk-width-container {
-    padding-left: 0; /* remove inner padding so image touches left edge of content area */
+    padding-left: 0;
+    /* remove inner padding so image touches left edge of content area */
     padding-right: 0;
   }
 
@@ -173,7 +176,8 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    background: #f3f2f1; /* light grey */
+    background: #f3f2f1;
+    /* light grey */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     overflow: hidden;
   }
@@ -239,23 +243,37 @@
   }
 }
 
-/* === Page Intro Banner === */
+
 .dfe-page-intro-banner {
-  background-color: #EAF5FF; /* Light DfE blue */
+  background-color: #EAF5FF;
+  /* Light DfE blue */
   width: 100vw;
   left: 50%;
   margin-left: -50vw;
   position: relative;
-  padding: 3rem 0;
+  padding: 3rem 0 2rem 0;
 
+  /* Wrapper layout */
   &__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* 2/3 - 1/3 split */
+    align-items: center;
+    /* vertically align h1/body with image */
+    gap: 1rem;
   }
 
+  /* Breadcrumbs always at the top */
   &__breadcrumbs {
     margin-bottom: 1.5rem;
-    margin-top: -2.0rem;
+    margin-top: -2rem;
+  }
+
+  /* Text block */
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title {
@@ -272,8 +290,42 @@
     margin: 0;
   }
 
+  /* Image block */
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__image img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 240px;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 1024px) {
+    &__image img {
+      max-height: 200px;
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 2rem 0;
+
+    &__content {
+      grid-template-columns: 1fr;
+      align-items: flex-start;
+    }
+
+    &__image {
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    &__image img {
+      max-height: 160px;
+    }
 
     &__title {
       font-size: 1.75rem;
@@ -284,6 +336,41 @@
     }
   }
 }
+
+
+/* The container applied around the nav */
+.moj-side-navigation-container {
+  overflow: visible !important; /* Critical: allow sticky to work */
+}
+
+/* Make sure the sticky wrapper behaves correctly inside the flex grid */
+.sticky-wrapper {
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start; /* Required for flex parent layouts */
+}
+
+/* Optional: styling for the "On this page" heading */
+.moj-side-navigation__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Smooth anchor jumps */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable sticky on mobile */
+@media (max-width: 768px) {
+  .sticky-wrapper {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
 
 /* === DfE Blue Content Box === */
 .dfe-blue-content-box {
@@ -317,20 +404,11 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 /* === GOV.UK / DfE Header Search Alignment === */
 
 .dfe-header__inner {
-  display: block; /* remove default flex from GOV.UK header container */
+  display: block;
+  /* remove default flex from GOV.UK header container */
 }
 
 .govuk-header__search {
@@ -356,7 +434,8 @@
   height: 2.5rem;
   padding: 0 0.75rem;
   font-size: 1rem;
-  width: 300px; /* set width of the input */
+  width: 300px;
+  /* set width of the input */
 }
 
 .govuk-header__search-input::placeholder {
@@ -380,3 +459,4 @@
     margin-top: 0.5rem;
   }
 }
+
