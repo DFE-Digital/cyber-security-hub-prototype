@@ -12,8 +12,8 @@
 {% block beforeContent %}
 {{ heroBanner(
 "/public/images/protect-your-school-banner.png",
-"Protect your school against cyber attacks",
-"Build a solid understanding of cyber security and take practical steps to strengthen your setting's cyber resilience."
+"What you can do now ",
+"Steps you can take to protect, prevent and prepare for a cyber attack"
 ) }}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
@@ -24,7 +24,7 @@ text: "Home",
 href: "/home.html"
 },
 {
-text: "Protect your school against cyber attacks"
+text: "What you can do now"
 }
 ]
 }) }}
@@ -33,21 +33,10 @@ text: "Protect your school against cyber attacks"
 <!-- BODY CONTENT -->
 {% block content %}
 
-<h2> Understand and implement </h2>
+<h2>Preventative measures to take</h2>
 
 {{ card({
 cards: [
-{
-"imageCard": true,
-"imagePath": "/public/images/cyber-standards-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/our-cyber-standards",
-"openInNewTab": false,
-"heading": "Our cyber security standards",
-"description": "Explore the standards and learn how to meet them."
-},
 {
 "imageCard": true,
 "imagePath": "/public/images/MFA-card-image.png",
@@ -75,56 +64,7 @@ cards: [
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-{{ fullWidthCard(
-"/public/images/case-studies-grey-card.png",
-"",
-"Case studies",
-"#",
-"Learn from real-life examples of how schools responded to cyber incidents."
-) }}
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-<h2> Key considerations </h2>
-{{ card({
-cards: [
-{
-"imageCard": true,
-"imagePath": "/public/images/roles-and-responsibilities-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/roles-and-responsibilities",
-"openInNewTab": false,
-"heading": "Cyber security roles and responsibilities",
-"description": "See the actions all staff should be taking and those that are role specific."
-},
-{
-"imageCard": true,
-"imagePath": "/public/images/what-to-look-for-in-supplier-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/what-to-look-for-in-supplier",
-"openInNewTab": false,
-"heading": "What to look for in a cyber security supplier",
-"description": "How vetting suppliers can help prevent supply chain cyber threats."
-},
-{
-"imageCard": true,
-"imagePath": "/public/images/risk-protection-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/risk-protection",
-"openInNewTab": false,
-"heading": "DfE Risk Protection Arrangement (RPA)",
-"description": "Learn about this alternative to commercial cyber security insurance."
-}
-]
-}) }}
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2>Raise awareness in your school</h2>
 
 {{ fullWidthCard(
 "/public/images/printables-grey-card.png",
@@ -136,7 +76,48 @@ cards: [
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Services and initiatives we recommend </h2>
+<h2> Have the right documentation in place</h2>
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/create-cyber-response-plan-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/creating-cyber-response-plan",
+"openInNewTab": false,
+"heading": "Create your cyber response plan",
+"description": "Tailor this template for your setting to build a response plan that works."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/keeping-a-record-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/keeping-a-record",
+"openInNewTab": false,
+"heading": "Keeping a record of any incidents that occur",
+"description": "Find out how clear documentation supports compliance and provides protection."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Assessing-the-impact-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/assessing-the-impact",
+"openInNewTab": false,
+"heading": "Assessing the impact the incident may have",
+"description": "Support in assessing an incident’s scope to help you choose an appropriate response."
+}
+]
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2> Explore more ways to protect your school </h2>
 {{ card({
 cards: [
 {
@@ -171,6 +152,28 @@ cards: [
 "openInNewTab": false,
 "heading": "Cyber Essentials Certification",
 "description": "Find out more about staying cyber secure with this government-backed scheme."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/what-to-look-for-in-supplier-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/what-to-look-for-in-supplier",
+"openInNewTab": false,
+"heading": "What to look for in a cyber security supplier",
+"description": "How vetting suppliers can help prevent supply chain cyber threats."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/risk-protection-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/risk-protection",
+"openInNewTab": false,
+"heading": "DfE Risk Protection Arrangement (RPA)",
+"description": "Learn about this alternative to commercial cyber security insurance."
 }
 ]
 }) }}

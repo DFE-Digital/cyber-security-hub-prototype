@@ -12,8 +12,8 @@
 {% block beforeContent %}
 {{ heroBanner(
 "/public/images/handle-cyber-attack-banner.png",
-"How to handle a cyber attack",
-"Helping you contain, eradicate and recover from a cyber incident."
+"What you need to know ",
+"Understand cyber security and how to respond to attacks."
 ) }}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {{ govukBreadcrumbs({
@@ -23,7 +23,7 @@ text: "Home",
 href: "/home.html"
 },
 {
-text: "How to handle a cyber attack"
+text: "What you need to know "
 }
 ]
 }) }}
@@ -32,21 +32,21 @@ text: "How to handle a cyber attack"
 <!-- BODY CONTENT -->
 {% block content %}
 
-{{ fullWidthCard(
-"/public/images/be-response-ready-grey-card.png",
-"",
-"Be response ready",
-"#",
-"A detailed breakdown of the response process to help your team respond efficiently and minimise impact."
-) }}
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
 <h2> Understanding cyber incidents and processes </h2>
 
 {{ card({
 cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/cyber-standards-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/our-cyber-standards",
+"openInNewTab": false,
+"heading": "Our cyber security standards",
+"description": "Explore the standards and learn how to meet them."
+},
 {
 "imageCard": true,
 "imagePath": "/public/images/Introduction-to-cyber-incident-management-card-image.png",
@@ -60,32 +60,29 @@ cards: [
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/Incident-management-vs-response-card-image.png",
+"imagePath": "/public/images/The-different-types-of-incidents-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
-"link": "/sub-pages/incident-management-vs-response",
+"link": "/sub-pages/different-types-of-incidents",
 "openInNewTab": false,
-"heading": "Incident management vs. incident response",
-"description": "Understand the differences between these cyber security terms."
-},
-{
-"imageCard": true,
-"imagePath": "/public/images/why-your-school-needs-a-plan-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/why-your-school-needs-a-plan",
-"openInNewTab": false,
-"heading": "Why your school needs a response plan",
-"description": "Explore the business justification for having a response plan in place."
+"heading": "The different types of incidents",
+"description": "Guidance for identifying incidents from symptoms and indicators."
 }
 ]
 }) }}
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Being one step ahead </h2>
+<h2> What you should know before an incident happens </h2>
+
+{{ fullWidthCard(
+"/public/images/be-response-ready-grey-card.png",
+"",
+"Be response ready",
+"#",
+"A detailed breakdown of the response process to help your team respond efficiently and minimise impact."
+) }}
 
 {{ card({
 cards: [
@@ -102,72 +99,32 @@ cards: [
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/The-different-types-of-incidents-card-image.png",
+"imagePath": "/public/images/why-your-school-needs-a-plan-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
-"link": "/sub-pages/different-types-of-incidents",
+"link": "/sub-pages/why-your-school-needs-a-plan",
 "openInNewTab": false,
-"heading": "The different types of incidents",
-"description": "Guidance for identifying incidents from symptoms and indicators."
+"heading": "Why your school needs a response plan",
+"description": "Explore the business justification for having a response plan in place."
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/create-cyber-response-plan-card-image.png",
+"imagePath": "/public/images/roles-and-responsibilities-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
-"link": "/sub-pages/creating-cyber-response-plan",
+"link": "/sub-pages/roles-and-responsibilities",
 "openInNewTab": false,
-"heading": "Create your cyber response plan",
-"description": "Tailor this template for your setting to build a response plan that works."
+"heading": "Cyber security roles and responsibilities",
+"description": "See the actions all staff should be taking and those that are role specific."
 }
 ]
 }) }}
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Key considerations </h2>
-
-{{ card({
-cards: [
-{
-"imageCard": true,
-"imagePath": "/public/images/Assessing-the-impact-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/assessing-the-impact",
-"openInNewTab": false,
-"heading": "Assessing the impact the incident may have",
-"description": "Support in assessing an incident’s scope to help you choose an appropriate response."
-},
-{
-"imageCard": true,
-"imagePath": "/public/images/keeping-a-record-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/keeping-a-record",
-"openInNewTab": false,
-"heading": "Keeping a record of any incidents that occur",
-"description": "Find out how clear documentation supports compliance and provides protection."
-},
-{
-"imageCard": true,
-"imagePath": "/public/images/managing-incidents-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/managing-incidents",
-"openInNewTab": false,
-"heading": "Managing incidents with fully sourced IT",
-"description": "Understand your setting’s responsibilities when using a third-party provider."
-}
-]
-}) }}
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2> Know how to respond to specific incidents</h2>
 
 {{ fullWidthCard(
 "/public/images/playbooks-grey-card.png",
@@ -176,6 +133,20 @@ cards: [
 "/playbooks-landing-page",
 "Incident-specific support to guide you through each stage of the response process."
 ) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2> Advice from other schools</h2>
+
+{{ fullWidthCard(
+"/public/images/case-studies-grey-card.png",
+"",
+"Case studies",
+"#",
+"Learn from real-life examples of how schools responded to cyber incidents."
+) }}
+
+
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
