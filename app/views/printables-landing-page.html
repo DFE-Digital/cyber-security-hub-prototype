@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- HERO BANNER -->
+{% block beforeContent %}
+{{ heroBanner(
+"/public/images/printables-grey-card.png",
+"Free printables",
+"From posters to display around your building to practical checklists, these printable resources have been designed to
+increase cyber security awareness in your setting."
+) }}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "What you need to know",
+href: "/respond-to-attack-landing-page"
+},
+{
+text: "Free printables"
+}
+]
+}) }}
+{% endblock %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+
+
+
+<h2> Posters </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/Cyber-awareness.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/intro-to-cyber-incident-and-management",
+"openInNewTab": false,
+"heading": "Fact sheet"
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Business-email-compromise.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/playbooks/BEC",
+"openInNewTab": false,
+"heading": "Business Email Compromise (BEC) Playbook "
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Ransomeware.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/playbooks/ransomware",
+"openInNewTab": false,
+"heading": "Ransomware Playbook"
+}
+]
+}) }}
+
+{% endblock %}
