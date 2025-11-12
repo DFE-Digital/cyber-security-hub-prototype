@@ -87,60 +87,465 @@ It must be used alongside your Incident Management Plan to ensure it fits your s
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="purpose" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="purpose" class="govuk-heading-l">Purpose</h2>
         <p class="govuk-body">
-
+            The purpose of this playbook is to provide technical insight and guidance into the actions to be considered
+            when <span class="govuk-body govuk-!-font-weight-bold">detecting, investigating and responding</span> to a
+            ransomware incident.  
+            <br><br>
+            This document is designed for educational settings with some existing cyber security controls. It is <span
+                class="govuk-body govuk-!-font-weight-bold">not a
+                standalone document</span> and must be used in conjunction with your settings Incident Management Plan
+            (Cyber
+            Response Plan) and associated safeguarding procedures. 
+            <br><br>
+            Whilst this document will contain technical actions that can be taken during an incident, it should ideally
+            be reviewed by your technical support team to tailor a response process specifically to your setting. 
+            <br><br>
+            This document covers a ransomware incident affecting a settings IT infrastructure, digital assets and data
+            held within. It is designed to be used by your organisations technical IT teams or ICT Managed service
+            provider, alongside existing incident management (cyber response) and safeguarding procedures.  
+            <br><br>
+            This document will explain the issue at its highest-level, meaning that every aspect may not be relevant to
+            your organisation.
+            <br><br>
+            If you have any system specific issues or queries, these should be addressed to your technical, ICT Managed
+            service provider and/or senior leadership team for additional guidance. 
         </p>
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="responding" class="govuk-heading-l">Disclaimer</h2>
-        <p class="govuk-body">
+        <h2 id="responding" class="govuk-heading-l">Responding to a ransom note</h2>
 
+        <h3 class="govuk-heading-s">Ransom Message/Payment </h3>
+        <p>As part of a ransomware incident, you may receive a warning message (also known as a ransom note) informing
+            the user of the infected device that any data on the device has been compromised, encrypted/locked or
+            stolen. This often comes with a monetary value to release your files back to you within a set time frame. 
+            <br><br>
+            Likewise, a threat actor may attempt to directly communicate with you and demand a ransom. It is important
+            to slow down and ensure all alternatives to payment are considered without feeling pressured. 
+            <br><br>
+            <span class="govuk-body govuk-!-font-weight-bold">There is no guarantee that your data and device will be
+                unencrypted or disinfected if that ransom is paid.</span> 
+            <br><br>
+            Where possible, consult with an expert including RPA (if you are a member), insurers, service providers, the
+            NCSC, law enforcement and/or cyber incident response (CIR) companies with expertise in handling ransomware
+            incidents (please see the NCSC’s list of <a href="#" class="govuk-link">assured CIR services</a>)
+            <br><br>
+            To help with further investigation, take a picture of the message on another device. This may be used as
+            evidence for law enforcement to identify threat actors and potentially the type of ransomware used. 
+            <br><br>
+            For additional guidance on whether you should pay, please see the <a href="#" class="govuk-link">NCSC’s
+                article</a>.
         </p>
+
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="actions" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="actions" class="govuk-heading-l">Immediate Actions</h2>
         <p class="govuk-body">
-
+            If you have identified an ongoing ransomware attack, first follow your Cyber Response Plan (CRP). This will
+            inform you on your settings cyber incident response process. This includes the following initial response: 
         </p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Contact your service provider immediately as they will help with remediation efforts.</li>
+            <li>If you are a member of the Risk Protection Agreement (RPA) please inform them of the incident. </li>
+            <li>If you have a cyber insurance policy, your insurance company should be contacted. Depending on your
+                insurance agreement, they may assist in remediation plans. </li>
+        </ul>
+
+        <p>To contain the infection and minimise impact, it is important your technical support or service provider
+            carry out the following immediate actions:</p>
+
+        <ol class="govuk-list govuk-list--number">
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Identify all affected systems, starting with the device and
+                system where initial reporting occurred.
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>
+                        This includes understanding critical systems used for daily functionality
+                        as to protect them and avoid any further disruption as much as possible.
+                    </li>
+                </ol>
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Notify the SLT digital lead key leadership within your setting and your service provider.
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>
+                        Including your Digital Lead, Incident Lead, Service Provider and, if needed, safeguarding lead.
+                    </li>
+                    <li>Utilise your setting’s communication plan if possible.</li>
+                    <li>Urgency is key to preventing a large-scale infection.</li>
+                    <li>
+                        Don’t communicate via potentially compromised systems — use your communication plan.
+                        <ol class="govuk-list govuk-list--roman">
+                            <li>
+                                This can include using mobile phones that aren’t connected to internal Wi-Fi or talking
+                                face-to-face.
+                            </li>
+                            <li>
+                                Threat actors will attempt to monitor communications to see if they have been detected,
+                                so limiting
+                                visibility to communication channels is a priority.
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Prioritise isolating critical infrastructure from affected systems
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>
+                        Disconnect affected devices from the network
+                        <ol class="govuk-list govuk-list--roman">
+                            <li>
+                                This can be by physically disconnecting the devices (removing the ethernet cable while
+                                following
+                                your setting’s safety protocol) or by disabling the Wi-Fi capability (including
+                                disconnecting the
+                                router).
+                            </li>
+                            <li>
+                                If this is not possible, power down the device (Note: this will prevent your setting
+                                from
+                                maintaining key investigation artefacts and evidence stored in volatile memory. Only do
+                                this if
+                                it is not possible to temporarily shut down the network or disconnect affected devices).
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        If multiple devices are affected, disable the network to limit the further spread of ransomware
+                        <ol class="govuk-list govuk-list--roman">
+                            <li>
+                                This can be achieved by physically unplugging the Wi-Fi router, only if the infected
+                                devices are
+                                unable to connect to another network.
+                            </li>
+                            <li>
+                                If you are unable to disable network or internet connections, you must temporarily
+                                disable network
+                                shares and shared drives.
+                                <ol class="govuk-list govuk-list--number">
+                                    <li>Any adjacent file shares should be temporarily disabled to prevent spread.</li>
+                                    <li>If this is not possible, contact your service provider for further actions.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                If your setting has backup internet connectivity, this should also be disabled on
+                                infected devices
+                                and systems to prevent further infection.
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        As mentioned in <strong>a.ii</strong>, do not power off the machine unless it is specified in
+                        your cyber
+                        response process or you have been told to by your SLT incident lead, so that you retain any
+                        evidence.
+                    </li>
+                </ol>
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Block unknown malicious IP addresses, domains and website URLs at your networks firewall.
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>This is important on all external-facing networks (please refer to your provider for
+                        system-specific information. At a minimum, Windows systems have the <a href="#"
+                            class="govuk-link">following capabilities</a>)
+                    </li>
+                    <li>This can be done by enabling an allow-list (aka whitelist) of known internal IP addresses</li>
+                </ol>
+            </li>
+
+        </ol>
+
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="reporting" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="reporting" class="govuk-heading-l">Reporting</h2>
         <p class="govuk-body">
-
+            All cyber incidents should be reported immediately to the relevant authority. As a ransomware incident has
+            likely resulted in some form of data breach, the following external supervisory authorities should be
+            informed: 
         </p>
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">Information Commissioners Office</a></h3>
+        <p>This must be done within 72 hours of becoming aware of your incident/data breach. 
+            <br><br>
+            This includes the nature of the breach, categories and number of individuals data that has been affected.
+        </p>
+
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">National cyber security centre (NCSC)</a></h3>
+        <p>If there is a clear danger to safeguarding for either staff members or leaners, please contact NCSC and fill
+            out the form.</p>
+
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">Local Police Authorities</a></h3>
+        <p>Please reach out to your local police authority if there is suspected clear financial or safeguarding impact.
+        </p>
+
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">Action Fraud</a></h3>
+        <p>You can visit their website or call <span class="govuk-body govuk-!-font-weight-bold">0300 123 2040</span>
+        </p>
+
+        <h3 class="govuk-heading-s">DfE RPA Team</h3>
+        <p>
+            If you are a member of the RPA membership scheme, please contact the RPA Emergency Assistance Helpline by
+            emailing <a href="#" class="govuk-link">RPAresponse@CyberClan.com</a> or call <span
+                class="govuk-body govuk-!-font-weight-bold">0800 368 6378</span>.
+        </p>
+
+        <h3 class="govuk-heading-s">Service Providers</h3>
+        <p>If the breach has affected any third-party service/system, the service providers should be informed of the
+            attack and involved in a coordinated response to the incident. </p>
+
+        <h3 class="govuk-heading-s">Insurance Providers </h3>
+        <p>
+            If you are a member of a private insurance and cyber incidents are part of your coverage, please contact
+            them immediately. Dependant on your coverage, they may provide direct assistance in recovery. 
+
+            <br><br>
+            In the event your incident has been discovered and reported by a news media outlet, it is important that you
+            have assigned a staff member to co-ordinate communications in line with an approved post-disaster
+            communication plan. The staff media contact should only provide verifiable information, with no room for
+            speculation.  
+            <br><br>
+            For information that is still not known, it is justified to simply state “That is not known at this stage”.
+            Only the appointed staff media contact should communicate with the media, with all other staff refusing to
+            comment. 
+        </p>
+
+
+
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="containment" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="containment" class="govuk-heading-l">Containment</h2>
+        <h3 class="govuk-heading-m">Further Containment</h3>
         <p class="govuk-body">
-
+            In some serious cases, your Incident Lead should consider whether turning off key internet and any core
+            network connections (including network hardware such as routers and switches) may be necessary. 
+            <br><br>
+            It is important to identify and discuss the following actions with your SLT incident lead, technical support
+            and service providers when containing an incident to minimise impact: 
         </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Identify all impacted devices and systems impacted by the malware, and where the initial incident
+                occurred</li>
+            <li>Prioritise isolating critical systems that are essential to daily operations</li>
+            <li>This includes systems that hold learner data, financial systems and any systems that may affect
+                safeguarding</li>
+            <li>Check if your setting has an <a href="#" class="govuk-link">asset list</a> to help with this </li>
+            <li>If taking the network down temporarily offline is not possible, remove any infected (even if suspected)
+                devices offline by removing internet/network connectivity.</li>
+            <li>For cloud environments, take a digital image snapshot using the relevant tooling of affected volumes to
+                get a point-in-time copy for further forensic investigation.</li>
+        </ul>
+
+        <p>After a compromise, threat actors may still be on the system and monitor your settings
+            activity/communications to understand if they have been detected. Isolate any suspected impacted systems in
+            a coordinated manner and use alternate communication (over the phone or in-person) to communicate. </p>
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="recovery" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="recovery" class="govuk-heading-l">Eradication and Recovery</h2>
         <p class="govuk-body">
-
+            Prior to taking any recovery action, ensure any details of the incident are recorded and documented in
+            detail for further evidence. 
+            <br><br>
+            Once all devices and systems infected by the ransomware have been identified and further infection has been
+            mitigated, they can undergo decontamination and recovery prior to reconnecting to your network.
+            <br><br>
+            Please be aware, critical files that have been encrypted by most ransomware have no way of being decrypted
+            by anyone other than the threat actor or by expert intervention (see Trend Micro Decryption Tool for
+            potential decryption methods).  
+            <br><br>
+            If critical systems or data have been encrypted, it may be tempting to pay the ransom. There is no guarantee
+            that your devices, systems or data will be decrypted.  
+            There are online resources that provide collections of decryption tools, this includes the No More Ransom
+            Project and other anti-virus vendors (e.g TrendMicro).  
+            <br><br>
+            If critical infrastructure has not been infected, the following recovery actions should be taken: 
         </p>
+
+        <ol class="govuk-list govuk-list--number">
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Reset any account credentials/passwords, especially for administrator or system accounts, that may have
+                been impacted.
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>This can include resetting all accounts to be safe.</li>
+                </ol>
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Safely restart and wipe the infected devices to reinstall the operating system.
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Prior to restoring from a backup or connecting the device to your network, verify it is free of any
+                malware. 
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>This includes using software anti-virus and triaging all devices</li>
+                    <li>Only connect devices to your network and restore from a backup if you are very confident that
+                        the backup and device are not infected</li>
+                    <li>
+                        Consider utilising a phased backup approach. This includes backing up devices and systems in
+                        waves, rather than all at once.
+                        <ol class="govuk-list govuk-list--roman">
+                            <li>This can limit the spread of an infection if any remains whilst restoration is ongoing.
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Connect devices to a clean network to download, install and update the operating system and any
+                additional software.
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Once all security operating system and software updates are installed, run local anti-virus scans on all
+                devices.
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>Once this has returned a clean scan, the device can be reconnected to your network.</li>
+                </ol>
+            </li>
+
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Continually monitor network traffic and run anti-virus scans frequently to identify any remaining
+                malicious presence.
+            </li>
+        </ol>
+        <br>
+        <p>For additional information on removing virus infections, please follow <a href="#" class="govuk-link">NCSC
+                Guidance</a>.
+             <br><br>
+            Depending on the nature of the incident, threat actors may have hidden additional access to infected systems
+            (known as a “backdoor”). Ensure all aspects of the system have been inspected and triaged including backup
+            volumes, administrator storage and unlikely sources of network activity.
+             <br><br>
+            This can be verified by performing system anti-malware scans and thorough system checks (either by internal
+            or external auditing teams). This must include:</p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>A thorough vulnerability scan on all devices attached to your settings network. </li>
+            <li>Checking that all software and hardware is licensed and received up-to-date functionality and security
+                updates/patches. </li>
+        </ul>
+
+        <p>For more technical guidance on triaging and remediating malicious activity, please see a publication released
+            by <a href="#" class="govuk-link">CISA and NCSC</a>.</p>
+
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="post-incident" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="post-incident" class="govuk-heading-l">Post-Incident</h2>
+        <h3 class="govuk-heading-m">Debrief</h3>
         <p class="govuk-body">
-
+            It is important that all members of staff involved in incident investigation, triaging, mitigation and
+            recovery undergo some form of interview and action review to ensure all the appropriate steps were taken to
+            mitigate the incident.  
+            <br><br>
+            This includes communicating to all stakeholders internal to your setting (e.g. Digital Leader, Senior
+            Leadership, safeguarding officer), and external to your investigation if they have been impacted (e.g.
+            parent/learner data will require legal guardians to be informed “without undue delay”, according to <a
+                href="#" class="govuk-link">GDPR</a>). 
+            <br><br>
+            Ensure your incident review report is readable and concise to help present to senior leadership. It is key
+            to have full support in the actions taken during and post-incident as to prevent a ‘blame culture’ and
+            ensure that the right steps were taken. 
+            <br><br>
+            It is important to remember that whilst the initial incident has been mitigated and system recovered, all
+            users and incident leader should remain vigilant and aware of possible future compromise. This should be
+            involved in any debriefs, training activities and lead to a review/update of your setting cyber response
+            plan and cyber risk assessment.  
         </p>
         {% endcall %}
 
-        {% call blueContentBox() %}
-        <h2 id="links" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="links" class="govuk-heading-l">Useful links</h2>
+        
         <p class="govuk-body">
-
+            <a href="#" class="govuk-link">
+                guide to ransomware - NCSC.GOV.UK
+            </a>
         </p>
-        {% endcall %}
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Mitigating malware and ransomware attacks - NCSC.GOV.UK 
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Technical Approaches to Uncovering and Remediating Malicious Activity | CISA 
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Using the Trend Micro Ransomware File Decryptor Tool 
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                NCSC-Alert-Further-targeted-ransomware-attacks-education-sector-March-2021.pdf 
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                I've Been Hit By Ransomware! | CISA
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Technical Approaches to Uncovering and Remediating Malicious Activity | CISA
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Personal data breaches: a guide | ICO
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Guidance for organisations considering payment in... - NCSC.GOV.UK
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Cyber Security for Schools - NCSC.GOV.UK
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Incident management - NCSC.GOV.UK
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                https://www.secrc.police.uk/helphacked
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Cyber Essentials scheme: overview - GOV.UK
+            </a>
+        </p>
 
     </div>
 </div>

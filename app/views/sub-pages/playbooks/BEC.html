@@ -23,7 +23,7 @@ text: "Home",
 href: "/home.html"
 },
 {
-text: "How to handle a cyber attack",
+text: "What you need to know",
 href: "/respond-to-attack-landing-page.html"
 },
 {
@@ -39,39 +39,119 @@ text: "BEC Playbook "
 
 
 
-<!-- body content  -->
+<!-- body content -->
 {% block content %}
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-one-third">
+    <!-- LEFT COLUMN: Sticky side navigation -->
 
-        {{ mojSideNavigation({
-        label: "Side navigation",
-        items: [{
-        text: "Nav item 1",
-        href: "#1"
-        }, {
-        text: "Nav item 2",
-        href: "#2"
-        }, {
-        text: "Nav item 3",
-        href: "#3"
-        }]
-        }) }}
-
+    <div class="govuk-grid-column-one-third sticky-wrapper">
+        <aside class="moj-side-navigation-container" role="complementary">
+            {{ mojSideNavigation({
+            label: "Side navigation",
+            sections: [
+            {
+            heading: {
+            text: "On this page"
+            },
+            items: [
+            { text: "Disclaimer", href: "#disclaimer" },
+            { text: "Purpose", href: "#purpose" },
+            { text: "Responding to a ransom note", href: "#responding" },
+            { text: "Immediate actions", href: "#actions" },
+            { text: "Reporting", href: "#reporting" },
+            { text: "Containment and Further containment", href: "#containment" },
+            { text: "Eradication and Recovery", href: "#recovery" },
+            { text: "Post-Incident", href: "#post-incident" },
+            { text: "Useful links", href: "#links" }
+            ]
+            }
+            ]
+            }) }}
+        </aside>
     </div>
-
-
+    <!-- RIGHT COLUMN: Page content -->
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> hello</p>
+        {{ govukInsetText({
+        text: "While this playbook is primarily designed for IT and technical individuals, non-technical readers may
+        still find value in the content. It can help you understand the actions of your technical team and gives you the
+        language and context to ask them informed questions and engage in the response process."
+        }) }}
 
-        <h2 class="govuk-heading-m"> hello</h2>
+        {% call blueContentBox() %}
+        <h2 id="disclaimer" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+            If you are currently experiencing a ransomware incident, you should immediately activate
+            your cyber response plan. This will give you specific actions that need to be taken to restore your system.
+            <br><br>
+            All settings must now have a 3-2-1 backup process in place which should now be applied. You should contact
+            your IT provider for support or reach out to the RPA if you are a member.
+            <br><br>
+            If your incident plan isn’t available or you don’t have a cyber response process, it's crucial to use and
+            adapt the steps in this playbook.
+            <br><br>
+            Tailoring the actions to your setting will give you the best possible chance to limit impact and begin
+            recovery to daily operations.
+        </p>
+        {% endcall %}
 
+        {% call blueContentBox() %}
+        <h2 id="purpose" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
 
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="responding" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="actions" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="reporting" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="containment" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="recovery" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="post-incident" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="links" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
 
     </div>
 </div>
-
-
 {% endblock %}
