@@ -55,8 +55,8 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/intro-to-cyber-incident-and-management",
 "openInNewTab": false,
-"heading": "Introduction to cyber incident management and response",
-"description": "Build your understanding of the full process through this detailed overview."
+"heading": "How to manage a cyber incident response",
+"description": "Learn how to prepare, respond to, and evaluate an incident in your school."
 },
 {
 "imageCard": true,
@@ -66,8 +66,8 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/different-types-of-incidents",
 "openInNewTab": false,
-"heading": "The different types of incidents",
-"description": "Guidance for identifying incidents from symptoms and indicators."
+"heading": "Different types of cyber incidents",
+"description": "Learn about the most common ways a cyber attack can take place."
 }
 ]
 }) }}
@@ -79,9 +79,9 @@ cards: [
 {{ fullWidthCard(
 "/public/images/be-response-ready-grey-card.png",
 "",
-"Be response ready",
+"Incident response process",
 "#",
-"A detailed breakdown of the response process to help your team respond efficiently and minimise impact."
+"A standard process you can use to create custom plans for your school to use in a cyber attack."
 ) }}
 
 {{ card({
@@ -95,7 +95,7 @@ cards: [
 "link": "/sub-pages/preparing-for-incident",
 "openInNewTab": false,
 "heading": "Preparing for a cyber incident",
-"description": "Learn how to be prepared for quick, effective incident response."
+"description": "What you can do now to prepare for a quick, effective incident response."
 },
 {
 "imageCard": true,
@@ -106,7 +106,7 @@ cards: [
 "link": "/sub-pages/why-your-school-needs-a-plan",
 "openInNewTab": false,
 "heading": "Why your school needs a response plan",
-"description": "Explore the business justification for having a response plan in place."
+"description": "Support learners, staff, and meet your duties with a cyber response plan."
 },
 {
 "imageCard": true,
@@ -117,7 +117,7 @@ cards: [
 "link": "/sub-pages/roles-and-responsibilities",
 "openInNewTab": false,
 "heading": "Cyber security roles and responsibilities",
-"description": "See the actions all staff should be taking and those that are role specific."
+"description": "Find out who’s responsible for cyber security in your setting."
 }
 ]
 }) }}
@@ -129,9 +129,9 @@ cards: [
 {{ fullWidthCard(
 "/public/images/playbooks-grey-card.png",
 "",
-"Let our playbooks lead your attack response",
+"Incident-specific guidance",
 "/playbooks-landing-page",
-"Incident-specific support to guide you through each stage of the response process."
+"Use our playbooks to guide you through each stage of the response process."
 ) }}
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -141,33 +141,39 @@ cards: [
 {{ fullWidthCard(
 "/public/images/case-studies-grey-card.png",
 "",
-"Case studies",
+"Learn from experience",
 "#",
-"Learn from real-life examples of how schools responded to cyber incidents."
+"Real-life examples of how schools responded to cyber incidents."
 ) }}
 
 
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Quick links </h2>
+<h2>Other organisations that can help </h2>
+
+{{ infoRow({
+imageSrc: "/public/images/Education data hub.png",
+imageAlt: "Education Data Hub",
+heading: "Education Data Hub",
+linkHref: "https://educationdatahub.org.uk/",
+bodyText: "School-focused support for cyber security, data management and data protection."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/ICO.png",
+imageAlt: "ICO",
+heading: "Information Commissioner’s Office",
+linkHref: "https://ico.org.uk/for-organisations/advice-for-small-organisations/information-security/",
+bodyText: "Advice to help schools understand data protection principles and cyber security best practice."
+}) }}
 
 {{ infoRow({
 imageSrc: "/public/images/police.png",
 imageAlt: "police",
 heading: "UK Police",
 linkHref: " ",
-bodyText: "Get police guidance on protecting yourself from cyber crime. if you are experiencing a real-time attack or
-are in immediate danger, call 999 now."
-}) }}
-
-{{ infoRow({
-imageSrc: "/public/images/ICO.png",
-imageAlt: "ICO",
-heading: "ICO",
-linkHref: " ",
-bodyText: "Report personal data breaches to the ICO within 72 hours of becoming aware, unless they are unlikely to pose
-a risk to individuals’ rights and freedom."
+bodyText: "Get police guidance on protecting yourself from cyber crime."
 }) }}
 
 {{ infoRow({
@@ -175,8 +181,7 @@ imageSrc: "/public/images/Action-Fraud-Logo.png",
 imageAlt: "Action-Fraud-Logo",
 heading: "Action Fraud",
 linkHref: " ",
-bodyText: "Reporting the incident to Action Fraud will provide a crime reference number and the National Fraud
-Intelligence Bureau notified."
+bodyText: "Find out about the different types of cyber fraud and how to report them."
 }) }}
 
 {% endblock %}

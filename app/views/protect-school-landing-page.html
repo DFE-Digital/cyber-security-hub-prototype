@@ -69,9 +69,9 @@ cards: [
 {{ fullWidthCard(
 "/public/images/printables-grey-card.png",
 "",
-"Free printables",
+"Printable resources",
 "/printables-landing-page",
-"Promote cyber security awareness in your school with these checklists and posters."
+"Checklists and posters to promote cyber security awareness in your school."
 ) }}
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -88,7 +88,7 @@ cards: [
 "link": "/sub-pages/creating-cyber-response-plan",
 "openInNewTab": false,
 "heading": "Create your cyber response plan",
-"description": "Tailor this template for your setting to build a response plan that works."
+"description": "Create a plan to help your school respond to a cyber incident."
 },
 {
 "imageCard": true,
@@ -98,7 +98,7 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/keeping-a-record",
 "openInNewTab": false,
-"heading": "Keeping a record of any incidents that occur",
+"heading": "Record keeping in an incident",
 "description": "Find out how clear documentation supports compliance and provides protection."
 },
 {
@@ -109,8 +109,8 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/assessing-the-impact",
 "openInNewTab": false,
-"heading": "Assessing the impact the incident may have",
-"description": "Support in assessing an incident’s scope to help you choose an appropriate response."
+"heading": "Assess and document the incident’s impact",
+"description": "Determine your incident’s scope and choose an appropriate response."
 }
 ]
 }) }}
@@ -128,8 +128,8 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/plan-tech",
 "openInNewTab": false,
-"heading": "Plan technology for your school",
-"description": "See how this free self-assessment service can help your school meet our cyber standards."
+"heading": "Self-assess your school",
+"description": "Use the plan technology self-assessment service to help your school meet  cyber standards."
 },
 {
 "imageCard": true,
@@ -139,8 +139,8 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/support-from-NCSC",
 "openInNewTab": false,
-"heading": "The National Cyber Security Centre",
-"description": "How vetting suppliers can help prevent supply chain cyber threats."
+"heading": "Recommended initiatives",
+"description": "Explore the National Cyber Security Centre’s recommendations that can help schools."
 },
 {
 "imageCard": true,
@@ -161,8 +161,8 @@ cards: [
 "linkCard": true,
 "link": "/sub-pages/what-to-look-for-in-supplier",
 "openInNewTab": false,
-"heading": "What to look for in a cyber security supplier",
-"description": "How vetting suppliers can help prevent supply chain cyber threats."
+"heading": "Finding and choosing a cyber security supplier",
+"description": "Know what to look for if you are procuring a cyber security supplier."
 },
 {
 "imageCard": true,
@@ -180,32 +180,14 @@ cards: [
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2> Helpful links </h2>
-<p>Explore certifications, organisations and standards that support effective cyber security.</p>
-
-{{ infoRow({
-imageSrc: "/public/images/GOV DFE.png",
-imageAlt: "GOV DFE image",
-heading: "DfE Cyber Security Standards",
-linkHref: "https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges/cyber-security-standards-for-schools-and-colleges",
-bodyText: "Tailored for the education sector, these standards support schools and colleges in building cyber
-resilience."
-}) }}
-
-{{ infoRow({
-imageSrc: "/public/images/NCSC.png",
-imageAlt: "NCSC",
-heading: "National Cyber Security Centre",
-linkHref: "https://www.ncsc.gov.uk/section/education-skills/schools",
-bodyText: "Guidance to help businesses and the public sector protect the online services and devices they depend on."
-}) }}
+<h2>Other organisations that can help </h2>
 
 {{ infoRow({
 imageSrc: "/public/images/Education data hub.png",
 imageAlt: "Education Data Hub",
 heading: "Education Data Hub",
 linkHref: "https://educationdatahub.org.uk/",
-bodyText: "A school-focused support service providing support in cyber security, data management and data protection."
+bodyText: "School-focused support for cyber security, data management and data protection."
 }) }}
 
 {{ infoRow({
@@ -215,5 +197,38 @@ heading: "Information Commissioner’s Office",
 linkHref: "https://ico.org.uk/for-organisations/advice-for-small-organisations/information-security/",
 bodyText: "Advice to help schools understand data protection principles and cyber security best practice."
 }) }}
+
+{{ infoRow({
+imageSrc: "/public/images/police.png",
+imageAlt: "police",
+heading: "UK Police",
+linkHref: " ",
+bodyText: "Get police guidance on protecting yourself from cyber crime."
+}) }}
+
+{{ infoRow({
+imageSrc: "/public/images/Action-Fraud-Logo.png",
+imageAlt: "Action-Fraud-Logo",
+heading: "Action Fraud",
+linkHref: " ",
+bodyText: "Find out about the different types of cyber fraud and how to report them."
+}) }}
+<!-- {{ infoRow({
+imageSrc: "/public/images/GOV DFE.png",
+imageAlt: "GOV DFE image",
+heading: "DfE Cyber Security Standards",
+linkHref: "https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges/cyber-security-standards-for-schools-and-colleges",
+bodyText: "Tailored for the education sector, these standards support schools and colleges in building cyber
+resilience."
+}) }} -->
+
+<!-- {{ infoRow({
+imageSrc: "/public/images/NCSC.png",
+imageAlt: "NCSC",
+heading: "National Cyber Security Centre",
+linkHref: "https://www.ncsc.gov.uk/section/education-skills/schools",
+bodyText: "Guidance to help businesses and the public sector protect the online services and devices they depend on."
+}) }} -->
+
 
 {% endblock %}
