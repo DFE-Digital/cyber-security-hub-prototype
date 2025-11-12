@@ -23,11 +23,11 @@ text: "Home",
 href: "/home.html"
 },
 {
-text: "How to handle a cyber attack",
+text: "What you need to know",
 href: "/respond-to-attack-landing-page.html"
 },
 {
-text:"Let our playbooks lead your attack response ",
+text:"Incident-specific guidance",
 href:"/playbooks-landing-page"
 },
 {
@@ -39,39 +39,228 @@ text: "BEC Playbook "
 
 
 
-<!-- body content  -->
+<!-- body content -->
 {% block content %}
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-one-third">
+    <!-- LEFT COLUMN: Sticky side navigation -->
 
-        {{ mojSideNavigation({
-        label: "Side navigation",
-        items: [{
-        text: "Nav item 1",
-        href: "#1"
-        }, {
-        text: "Nav item 2",
-        href: "#2"
-        }, {
-        text: "Nav item 3",
-        href: "#3"
-        }]
-        }) }}
-
+    <div class="govuk-grid-column-one-third sticky-wrapper">
+        <aside class="moj-side-navigation-container" role="complementary">
+            {{ mojSideNavigation({
+            label: "Side navigation",
+            sections: [
+            {
+            heading: {
+            text: "On this page"
+            },
+            items: [
+            { text: "Disclaimer", href: "#disclaimer" },
+            { text: "Overview", href: "#overview" },
+            { text: "Purpose", href: "#purpose" },
+            { text: "Immediate actions", href: "#actions" },
+            { text: "Reporting", href: "#reporting" },
+            { text: "Indicators of compromise", href: "#indicators" },
+            { text: "Containment ", href: "#containment" },
+            { text: "Recovery", href: "#recovery" },
+            { text: "Post-Incident", href: "#post-incident" },
+            { text: "Useful links", href: "#links" }
+            ]
+            }
+            ]
+            }) }}
+        </aside>
     </div>
-
-
+    <!-- RIGHT COLUMN: Page content -->
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> hello</p>
+        {{ govukInsetText({
+        text: "This playbook offers technical guidance for responding to a business email compromise incident, but it is
+        not a standalone resource. It must be used alongside your Incident Management Plan to ensure it fits your
+        setting."
+        }) }}
 
-        <h2 class="govuk-heading-m"> hello</h2>
+        {% call blueContentBox() %}
+        <h2 id="disclaimer" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+            If you are currently experiencing an incident, please first address your settings cyber response plan. This
+            will give you specific actions that need to be taken to restore your system. 
+            <br><br>
+            If your incident plan isn’t available or you don’t have a cyber response process, it's crucial to use and
+            adapt the steps in this playbook. 
+            <br><br>
+            Tailoring the actions to your setting will give you the best possible chance to limit impact and begin
+            recovery to daily operations.
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="overview" class="govuk-heading-l">Overview</h2>
+        <p class="govuk-body">
+            As defined by NCSC, a business email compromise (BEC) occurs “when a criminal accesses a work email account
+            in order to trick someone into transferring money, or to steal valuable (or sensitive) data”.
+            <br><br>
+            This can involve any user accounts used to access and manage financial, personal or other sensitive
+            information (including senior staff, human resources and regular staff with minimal privileges).  
+            <br><br>
+            Unlike ordinary phishing emails which typically target a large group of users, BEC emails are tailored and
+            targeted to individuals within a setting. As users with access to sensitive materials are typically part of
+            the Senior Leadership Team, this targeted approach can also be known as ‘whaling’ or ‘spear phishing’. 
+            <br><br>
+            The aim of this is to either impersonate a legitimate member of a setting to take advantage of their
+            financial processes, allowing finances to be indirectly sent to the attacker or to gain access to the
+            account to carry out further attacks. 
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="purpose" class="govuk-heading-l">Purpose</h2>
+        <p class="govuk-body">
+            The purpose of this playbook is to provide technical insight and guidance into the actions to be considered
+            when investigating and responding to a BEC incident.  
+            <br><br>
+            This document is designed for educational settings with some existing cyber security controls. It is <span
+                class="govuk-body govuk-!-font-weight-bold">not a
+                standalone document</span> and must be used in conjunction with your settings Incident Management Plan
+            (Cyber
+            Response Plan) and associated safeguarding procedures. 
+            <br><br>
+            Whilst this document will contain technical actions that can be taken during an incident, it should ideally
+            be reviewed by your technical support team to tailor a response process specifically to your setting. This
+            should be done in advance and kept up to date so that your tailored playbook is ready to be used when an
+            incident occurs.
+            <br><br>
+            This document covers a BEC incident affecting a settings IT infrastructure, digital assets and data held
+            within. It is designed to be used by your settings technical IT teams or ICT Managed service provider,
+            alongside existing incident management (cyber response) and safeguarding procedures.  
+            <br><br>
+            This document will explain the issue at its highest level, meaning that every aspect may not be relevant to
+            your setting. If you have any system specific issues or queries, these should be addressed to your
+            technical, ICT Managed service provider and/or senior leadership team for additional guidance. 
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="actions" class="govuk-heading-l">Immediate actions</h2>
+        <p class="govuk-body">
+            If you have identified an ongoing attack, first consult your Cyber Response Plan (CRP). This will inform you
+            on your setting’s standard cyber incident response process which this playbook will enhance. This includes
+            the following initial response: 
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Contact your service provider immediately as they will help with remediation efforts.</li>
+            <li>If you’ve identified a fraudulent payment, contact your bank directly using their official website or
+                phone number.</li>
+            <li>This should also be reported as a crime to <a href="#" class="govuk-link">Action Fraud</a> by calling
+                <span class="govuk-body govuk-!-font-weight-bold">0300 123 2040</span>.
+            </li>
+            <li>If you are a member of the Risk Protection Agreement (RPA) please inform them of the incident.</li>
+            <li>If you have an insurance policy, your insurance company should be contacted. Depending on your insurance
+                agreement, they may assist in remediation plans.</li>
+        </ul>
+        <p> In order to contain the infection and minimise impact, it is important your technical support or service
+            provider carry out the following immediate actions:</p>
 
 
+        <ol class="govuk-list govuk-list--number">
+
+            <!-- 1 -->
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Contact your Digital and Incident SLT to enact your setting’s Cyber Response Plan. If you do not have a
+                BEC specific plan, continue following this process.
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>If you have been financially impacted, inform your settings bank to prevent further financial
+                        damage.</li>
+                </ol>
+            </li>
+
+            <!-- 2 -->
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Isolate the affected accounts and/or devices.
+                <ol class="govuk-list govuk-list--alpha"> 
+                    <li>
+                        If you have identified which accounts have been compromised, isolate these accounts by (Please
+                        follow <a href="#" class="govuk-link">Microsoft guidance</a>):
+                        <ol class="govuk-list govuk-list--roman">
+                            <li>Restricting the ability to send emails (<a href="#" class="govuk-link">Outlook</a>) to
+                                prevent further spread and ensure email forwarding has not be set up</li>
+                            <li>Restrict any <a href="#" class="govuk-link">additional privileges</a < /li>
+                            <li>Forcefully disabling the user account</li>
+                            <ol class="govuk-list govuk-list--number">
+                                <li>This can be done by changing password and login authorisation </li>
+                            </ol>
+                            <li>If possible, forcefully <a href="#" class="govuk-link">sign-out of all active
+                                    sessions</a></li>
+                            <li>If your setting has multi-factor authentication (MFA) in place, ensure there are no
+                                unauthorised methods added to prevent reinfection </li>
+                        </ol>
+                    </li>
+
+                    <!-- 2b -->
+                    <li>
+                        If a specific device has been impacted (for example, a keylogger virus was installed), then
+                        disconnect the device from your settings network as soon as possible. 
+                        <ol class="govuk-list govuk-list--roman">
+                            <li>This can be by disabling the internet connection of the device or if not possible,
+                                disabling the wi-fi to completely isolate the device</li>
+                            <li>Scan the network using an anti-virus to ensure there are no persistent malware on your
+                                system</li>
+                        </ol>
+                    </li>
+
+                </ol>
+            </li>
+
+            <!-- 3 -->
+            <li class="govuk-body govuk-!-font-weight-bold">
+                Ensure that the integrity of your settings financial systems (e.g. payroll, HR) have not been severely compromised. This includes:
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>Administrative accounts</li>
+                    <li>User payroll information</li>
+                    <li>Expected payment amounts</li>
+                </ol>
+            </li>
+
+        </ol>
+
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="reporting" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="containment" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="recovery" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="post-incident" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 id="links" class="govuk-heading-l">Disclaimer</h2>
+        <p class="govuk-body">
+
+        </p>
+        {% endcall %}
 
     </div>
 </div>
-
-
 {% endblock %}

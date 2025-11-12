@@ -448,6 +448,23 @@ html {
   border-color: #0b0c0c;
 }
 
+/* Restore GOV.UK list numbering */
+.govuk-list--number { list-style-type: decimal; }
+.govuk-list--alpha { list-style-type: lower-alpha; }
+.govuk-list--roman { list-style-type: lower-roman; }
+
+/* Automatically indent nested lists */
+.govuk-list ol {
+  margin-left: 1.5em;
+}
+
+/* Optional: tidy spacing between nested levels */
+.govuk-list li {
+  margin-bottom: 0.5em;
+}
+
+
+
 /* Responsiveness */
 @media (max-width: 640px) {
   .govuk-header__search-input {
