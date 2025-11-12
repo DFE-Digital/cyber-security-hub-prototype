@@ -5,6 +5,7 @@
 {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 {% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
 {% from "layouts/components/blue-content-box.html" import blueContentBox %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% block pageTitle %}
 {{ serviceName }} – GOV.UK Prototype Kit
@@ -40,13 +41,437 @@ text: "Keeping a record of any incidents that occur "
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> </p>
+        <p class="govuk-body">Accurate, timely, and secure record-keeping is essential at every stage of incident
+            management and response.
+            <br><br>
+            Alongside effective decision-making and lessons learnt, clear documentation supports compliance with
+            regulations such as GDPR, data privacy and safeguarding.
+            The documentation can also protect individuals and the education setting in the event of audits, legal
+            claims or further investigations.
+        </p>
 
-        <h2 class="govuk-heading-m"> </h2>
+        <h2 class="govuk-heading-m">Objectives</h2>
 
+        <h3 class="govuk-heading-s">Accuracy</h3>
+        <p>Records must reflect any actions taken and by who to mitigate the incident, using objective language
+            throughout.</p>
 
+        <h3 class="govuk-heading-s">Timeliness</h3>
+        <p>Records should be made as events unfold or as soon as practicable, with detailed time references to help
+            build an informative timeline.</p>
 
+        <h3 class="govuk-heading-s">Security</h3>
+        <p>Store all records securely, with access limited to those who need to know.</p>
+
+        <h3 class="govuk-heading-s">Consistency</h3>
+        <p>Use a standard format or template, such as our <a href="#" class="govuk-link">incident event recording
+                form</a> to ensure clarity and
+            completeness.  </p>
+
+        <h3 class="govuk-heading-s">Retention</h3>
+        <p>Follow your education settings’ records retention policies.</p>
+
+        <h2 class="govuk-heading-m">Roles and responsibilities</h2>
+        <p>The SLT Digital Leader typically oversees the non-technical record keeping and ensures leadership decisions
+            are recorded.  
+            IT support is responsible for logs, forensic data, technical actions, and system-level details.  
+            <br><br>
+            The SLT Digital Leader, assisted by IT support as required, is responsible for sharing access with those who
+            have a clear need to know. This includes protecting information from unauthorised access and clearly
+            labelling documents to help maintain continuity and prevent duplication or omission.  
+            <br><br>
+            Any formal reporting to external bodies such as Action Fraud will need to be done by someone appointed by
+            the SLT Digital Lead. The SLT and Headteacher or Principal should be involved, who will then approve a
+            formal report and outline any impact on school or college activity.  
+        </p>
+
+        <h2 class="govuk-heading-m">Good practice</h2>
+
+        <p>To maintain best practice, you should:</p>
+
+        <ol class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>assign a named record-keeper during major incidents, such as the SLT Digital Leader or a delegated
+                individual as Incident Leader and if possible, consider assigning a deputy </li>
+            <li>use Coordinated Universal Time (UTC) or 24-hour time for timestamps to avoid confusion </li>
+            <li>keep a written record, even if actions were also taken verbally or in person  </li>
+            <li>clearly mark draft documents, use document versioning and update documents as they are finalised </li>
+            <li>protect sensitive system and network event logs with encryption or password protection </li>
+            <li>document what didn’t happen if relevant, for example "no personal data loss identified" </li>
+        </ol>
+
+        <h2 class="govuk-heading-m">What to record and when</h2>
+
+        
+
+        <!-- BLUE BOX 1 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Initial incident report ",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Description of incident, how it was discovered and the initial assessment"
+        },
+        {
+        text: "SLT Digital Lead / Cyber Recovery Team"
+        },
+        {
+        text: "As soon as possible after time of detection"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 2 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Incident log / timeline",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Chronological list of actions, decisions and timestamps"
+        },
+        {
+        text: "SLT Digital Lead / Educational setting Communications Lead"
+        },
+        {
+        text: "During and after the incident"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 3 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Communications log",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Internal/external comms, such as emails, calls and in-person briefings"
+        },
+        {
+        text: "SLT Digital Lead / Educational setting Communications Lead"
+        },
+        {
+        text: "During and after the incident"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 4 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Decision log",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Rationale for key decisions and who made them"
+        },
+        {
+        text: "SLT Digital Lead"
+        },
+        {
+        text: "Throughout the incident"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 5 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Technical forensic logs",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "System activity, logs from affected devices/networks"
+        },
+        {
+        text: "Cyber Recovery Team"
+        },
+        {
+        text: "During technical investigation"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 6 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Containment and recovery actions",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Details of containment, mitigation and recovery efforts"
+        },
+        {
+        text: "Cyber Recovery Team"
+        },
+        {
+        text: "During and after the containment/recovery phases"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 7 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Data breach records",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Personal data affected, DPO assessment and ICO notification"
+        },
+        {
+        text: "DPO"
+        },
+        {
+        text: "If personal data is involved"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 8 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Meeting notes",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Summaries of strategy meetings or incident reviews"
+        },
+        {
+        text: "SLT Digital Lead"
+        },
+        {
+        text: "As required"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 9 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Post-incident review report",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Summary, lessons learnt and recommendations"
+        },
+        {
+        text: "SLT Digital Lead / Cyber Recovery Team"
+        },
+        {
+        text: "After closure"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <!-- BLUE BOX 10 -->
+         {% call blueContentBox() %}
+        {{ govukTable({
+        caption: "Follow-up actions tracker",
+        captionClasses: "govuk-table__caption--m",
+        head: [
+        {
+        text: "What to include",
+        classes: "app-custom-class"
+        },
+        {
+        text: "Owner",
+        classes: "app-custom-class"
+        },
+        {
+        text: "When to record",
+        classes: "app-custom-class"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Status of recommended improvements and action owners"
+        },
+        {
+        text: "SLT Digital Lead"
+        },
+        {
+        text: "After the incident"
+        }
+        ]
+        ]
+        }) }}
+        {% endcall %}
+
+        <h2 class="govuk-heading-m">Legal and regulatory considerations</h2>
+
+        <h3 class="govuk-heading-s">Article 33/34 of the UK GDPR  </h3>
+        <p>Maintain breach notification records (72-hour rule). </p>
+        
+        <h3 class="govuk-heading-s">Data Protection Act 2018  </h3>
+        <p>Includes specific UK exemptions to GDPR and rules for handling children’s data.</p>
+
+        <h3 class="govuk-heading-s">Freedom of Information (FOI)</h3>
+        <p>Incident records may be subject to FOI requests. </p>
+
+        <h3 class="govuk-heading-s">Audit/inspection readiness if applicable </h3>
+        <p> Good records demonstrate governance and compliance</p>
+
+        <h3 class="govuk-heading-s">Safeguarding Duty of Care</h3>
+        <p> Records may support child protection issues if relevant.</p>
     </div>
+
+
 </div>
 
 

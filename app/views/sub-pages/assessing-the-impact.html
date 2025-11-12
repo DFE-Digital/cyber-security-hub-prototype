@@ -5,6 +5,7 @@
 {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 {% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
 {% from "layouts/components/blue-content-box.html" import blueContentBox %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% block pageTitle %}
 {{ serviceName }} – GOV.UK Prototype Kit
@@ -40,9 +41,139 @@ text: "Assessing the impact the incident may have "
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> </p>
+        <p class="govuk-body">It is important to assess the impact of an incident so that a proportionate response can
+            be established and prioritised effectively.  
+             <br><br>
+            You can use this table to assess and document the scope of the incident to identify which key functions are
+            operational and which are affected.</p>
+        <br>
 
-        <h2 class="govuk-heading-m"> </h2>
+
+        {{ govukTable({
+        caption: "Operational",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        rows: [
+        [
+        {
+        text: "No impact"
+        },
+        {
+        text: "There is no noticeable impact on the setting’s ability to function"
+        }
+        ],
+        [
+        {
+        text: "Minor impact"
+        },
+        {
+        text: "There is a minor is some loss in the ability to function, with functions taking longer to carry out"
+        }
+        ],
+        [
+        {
+        text: "Medium impact"
+        },
+        {
+        text: "The setting has lost the ability to provide critical services to some users, but work arounds are
+        possible with planning and resources"
+        }
+        ],
+        [
+        {
+        text: "High impact"
+        },
+        {
+        text: "The setting can no longer provide any critical services to users and it’s likely the setting will close
+        or be considerably disrupted "
+        }
+        ]
+        ]
+        }) }}
+
+<br>
+        {{ govukTable({
+        caption: "Informational",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        rows: [
+        [
+        {
+        text: "No breach"
+        },
+        {
+        text: "No information has been accessed, compromised or lost"
+        }
+        ],
+        [
+        {
+        text: "Data breach"
+        },
+        {
+        text: "Access or loss of data which is not personal or linked to individuals, such as action and lesson plans,
+        policies, meeting notes or policies"
+        }
+        ],
+        [
+        {
+        text: "Personal data breach"
+        },
+        {
+        text: "Sensitive, identifiable data has been accessed or extracted which may cause ‘significant impact’ to the
+        person or people concerned, requiring a report to the ICO within 72 hours"
+        }
+        ],
+        [
+        {
+        text: "Integrity loss"
+        },
+        {
+        text: "Data which may include sensitive, personal information has been changed or deleted, including the
+        corruption of data"
+        }
+        ]
+        ]
+        }) }}
+<br>
+         {{ govukTable({
+        caption: "Restoration",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        rows: [
+        [
+        {
+        text: "Existing resources"
+        },
+        {
+        text: "Recovery can be promptly facilitated with the resources which are readily available to the setting"
+        }
+        ],
+        [
+        {
+        text: "Additional resources"
+        },
+        {
+        text: "Recovery can be facilitated within an identified timescale, using easily accessed additional resources"
+        }
+        ],
+        [
+        {
+        text: "Third party services"
+        },
+        {
+        text: "Recovery is not guaranteed, and outside services are required to facilitate full or partial restoration"
+        }
+        ],
+        [
+        {
+        text: "Not recoverable"
+        },
+        {
+        text: "Recovery from the incident is not possible, with data potentially being extracted, encrypted or failed backups"
+        }
+        ]
+        ]
+        }) }}
 
 
 
