@@ -12,8 +12,8 @@
 {% block beforeContent %}
 {{ heroBanner(
 "/public/images/be-response-ready-grey-card.png",
-"Incident response",
-"Your incident response process begins before an incident and continues once the incident is resolved.  [SAMPLE]"
+"Incident management and response",
+"Your incident response process begins before an incident and continues once the incident is resolved."
 ) }}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
@@ -37,29 +37,23 @@ text: "Incident response"
 <!-- BODY CONTENT -->
 {% block content %}
 
+<p>Incident management is how an organisation handles and manages a cyber incident, while incident response focuses on
+    the actions taken to analyse, contain, and recover.
+    <br><br>
+    You should have a tailored response plan in place to stay prepared and minimise impact.</p>
+
 {{ textOnlyFullWidthCard(
-  "",
-  "Incident-specific guidance",
-  "Use our playbooks to guide you through each stage of the response process.",
-  "sub-pages/preparing-for-incident",
-  "View guidance"
+"",
+"Preparing for an incident",
+"What you can do now to prepare for a quick, effective incident response.",
+"sub-pages/preparing-for-incident",
+"View guidance"
 ) }}
 
-<h2> Incident management  </h2>
+<h2>Incident management</h2>
 
 {{ card({
 cards: [
-{
-"imageCard": true,
-"imagePath": "/public/images/preparing-for-cyber-incident-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/preparing-for-incident",
-"openInNewTab": false,
-"heading": "Preparing for a cyber incident",
-"description": "What you can do now to prepare for a quick, effective incident response."
-},
 {
 "imageCard": true,
 "imagePath": "/public/images/why-your-school-needs-a-plan-card-image.png",
@@ -73,14 +67,25 @@ cards: [
 },
 {
 "imageCard": true,
-"imagePath": "/public/images/roles-and-responsibilities-card-image.png",
+"imagePath": "/public/images/preparing-for-cyber-incident-card-image.png",
 "altText": "Sample Image",
 "headingLevel": "3",
 "linkCard": true,
-"link": "/sub-pages/roles-and-responsibilities",
+"link": "/sub-pages/preparing-for-incident",
 "openInNewTab": false,
-"heading": "Cyber security roles and responsibilities",
-"description": "Find out who’s responsible for cyber security in your setting."
+"heading": "Create your cyber response plan",
+"description": "Understand how you can  create a tailored response plan for your setting."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/managing-incidents-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/managing-incidents",
+"openInNewTab": false,
+"heading": "Roles in an incident",
+"description": "See what the roles and responsibilities are in the event of an incident."
 }
 ]
 }) }}
@@ -99,18 +104,7 @@ cards: [
 "link": "/sub-pages/incident-response-process",
 "openInNewTab": false,
 "heading": "Incident response process",
-"description": "Lorem Ipsum"
-},
-{
-"imageCard": true,
-"imagePath": "/public/images/keeping-a-record-card-image.png",
-"altText": "Sample Image",
-"headingLevel": "3",
-"linkCard": true,
-"link": "/sub-pages/keeping-a-record",
-"openInNewTab": false,
-"heading": "Record keeping in an incident",
-"description": "Find out how clear documentation supports compliance and provides protection."
+"description": "Follow this standard process to guide your incident response."
 },
 {
 "imageCard": true,
@@ -122,6 +116,17 @@ cards: [
 "openInNewTab": false,
 "heading": "Assess and document the incident’s impact",
 "description": "Determine your incident’s scope and choose an appropriate response."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/keeping-a-record-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/keeping-a-record",
+"openInNewTab": false,
+"heading": "Record keeping in an incident",
+"description": "Find out how clear documentation supports compliance and provides protection."
 }
 ]
 }) }}
@@ -129,11 +134,11 @@ cards: [
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 {{ textOnlyFullWidthCard(
-  "",
-  "Incident-specific guidance",
-  "Use our playbooks to guide you through each stage of the response process.",
-  "/playbooks-landing-page",
-  "View the playbooks"
+"",
+"Incident-specific guidance",
+"Use our playbooks to guide you through each stage of the response process.",
+"/playbooks-landing-page",
+"View playbooks"
 ) }}
 
 
