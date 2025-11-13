@@ -40,7 +40,150 @@ text: "The different types of incidents"
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> </p>
+        <p class="govuk-body">This guidance supports both technical and non-technical stakeholders in discussing
+            observations during Triage and Analysis and proposing potential incident types.</p>
+        <p class="govuk-body">Understanding the potential incident type helps to ensure the appropriate people are
+            contacted and may enable the use of a tailored incident response playbook.</p>
+        <p class="govuk-body">This is not a comprehensive list or a detailed technical guide to indicators of
+            compromise. Settings should consult their IT support team and external sources such as the NCSC for more
+            detailed information.</p>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Observation / symptom</th>
+                    <th scope="col" class="govuk-table__header">Possible incident type</th>
+                    <th scope="col" class="govuk-table__header">Supporting indicators</th>
+
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">One or more user report receiving emails containing suspicious or
+                        unexpected attachments, links to suspicious websites, requests for credentials or demands for
+                        money</td>
+                    <td class="govuk-table__cell">Phishing / social engineering</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>poor spelling or grammar in the email text</li>
+                            <li>unexpected or unknown sender</li>
+                            <li>urgent requests for action</li>
+                            <li>links to fake login pages and/or unusual websites</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Multiple users report being locked out or unusual login activity
+                        detected</td>
+                    <td class="govuk-table__cell">Compromised account / unauthorised access, or potentially ransomeware
+                        - see below</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>login attempts from unfamiliar locations</li>
+                            <li>authentication alerts</li>
+                            <li>unscheduled password resets</li>
+                            <li>account activity at unusual times</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Files are encrypted and a ransome demand appears on user devices</td>
+                    <td class="govuk-table__cell">Ransomware</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>file extensions changes</li>
+                            <li>ReadMe or ransom note files</li>
+                            <li>inability to open files</li>
+                            <li>sudden system slowness</li>
+                            <li>unusually large amounts of data leaving or entering the network</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Antivirus or endpoint protection reports malware</td>
+                    <td class="govuk-table__cell">Malware infection</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>threat quarantined or blocked</li>
+                            <li>pop-ups</li>
+                            <li>system crashes</li>
+                            <li>unusual processes or CPU spikes - visible as sudden system slowness</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">IT systems and networks suddently become slow, unresponsive or
+                        inaccessible, including websites, email and MIS</td>
+                    <td class="govuk-table__cell">Denial of Service (DoS) or system outage</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>spike in network traffic</li>
+                            <li>service crashes</li>
+                            <li>repeated service restarts</li>
+                            <li>logs show external requests flooding a service</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Loss or theft of a laptop, USB stick, or printed files containing
+                        personal, financial or otherwise sensitive data</td>
+                    <td class="govuk-table__cell">Data loss or breach</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>device containing sensitive data unaccounted for or reported lost</li>
+                            <li>mis-sent printed materials</li>
+                            <li>staff reporting acccidental sharing</li>
+                            <li>CCTV or witness account of theft</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Student or staff files unexpectedly deleted, moved, or accessed
+                        without authorisation</td>
+                    <td class="govuk-table__cell">Insider threat</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>audit logs showing improper access</li>
+                            <li>confessions or alerts from staff or students</li>
+                            <li>unusual file changes or deletions</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Environmental issue, such as fire, flood or power loss, causes digital
+                        systems to become unavailable</td>
+                    <td class="govuk-table__cell">Environmental disruption</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>known fire or flood event</li>
+                            <li>power outage reported</li>
+                            <li>system damage after event</li>
+                        </ul>
+                    </td>
+                </tr>
+                                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Unknown devices or applications appear on the network or in cloud accounts</td>
+                    <td class="govuk-table__cell">Unauthorised device or shadow IT</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>device not in asset register</li>
+                            <li>apps not approved by IT</li>
+                            <li>unexpected bandwidth or API usage</li>
+                        </ul>
+                    </td>
+                </tr>
+                                                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Website content altered without authorisation</td>
+                    <td class="govuk-table__cell">Website defacement</td>
+                    <td class="govuk-table__cell">
+                        <ul class="govuk-list--bullet">
+                            <li>public site content changed</li>
+                            <li>change not made by admin</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         <h2 class="govuk-heading-m"> </h2>
 
