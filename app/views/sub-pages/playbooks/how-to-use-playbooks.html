@@ -1,0 +1,92 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"How to use our playbooks",
+"This playbook offers technical guidance for responding to a ransomware incident, but it is not a standalone resource.
+It must be used alongside your Incident Management Plan to ensure it fits your setting.",
+[
+{ text: "Home", href: "/home.html" },
+{ text: "What you need to know", href: "/respond-to-attack-landing-page.html" },
+{ text: "Incident-specific guidance", href: "/playbooks-landing-page" },
+{ text: "How to use our playbooks" }
+],
+"/public/images/Cyber-awareness-clear-background.png"
+) }}
+{% endblock %}
+
+<!-- body content  -->
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What is a cyber security incident playbook</h3>
+        <p class="govuk-body">Playbooks are concise sets of actions that should be taken in the event of a specific type
+            of cyber security incident.</p>
+
+        <h3 class="govuk-heading-m">How playbooks can help you</h3>
+        <p>Playbooks are designed to support you during cyber incidents. They are your resource to tailor and maintain
+            so that you can contain, eradicate and recover from a cyber incident.</p>
+
+        <h3 class="govuk-heading-m">When should playbooks be used?</h3>
+        <p>
+            Specific incident types often require specific response actions or slight changes to the standard response
+            process.
+            <br><br>
+            Using playbooks for specific incidents allows your Cyber Recovery Team to focus effort more effectively on
+            the
+            important task.
+        </p>
+
+        <h3 class="govuk-heading-m">Adapting the playbooks to your needs</h3>
+        <p>Every education setting is different; these playbooks <span
+                class="govuk-body govuk-!-font-weight-bold">must</span> be treated as templates that you need to change
+            to
+            meet your requirements.
+            <br><br>
+            For example, your own customised playbook will include specific references to:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your Cyber Recovery Team</li>
+            <li>key stakeholders</li>
+            <li>other key individuals required to respond to that specific incident type</li>
+            <li>contact details for the above</li>
+        </ul>
+        <p>Only technical instructions relevant to your <span class="govuk-body govuk-!-font-weight-bold">IT
+                assets</span> and in the context of your own IT Support provider
+            should be included.
+            <br><br>
+            We have created a set of playbooks that cover a range of common incidents: 
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="#" class="govuk-link">Ransomware</a></li>
+            <li><a href="#" class="govuk-link">Business Email Compromise</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Who should be involved</h3>
+        <p>You should involve key stakeholders in adapting your playbooks, especially those shaping the Cyber Security
+            Incident Response Plan and those relevant to the incident type.  
+            <br><br>
+            You should ensure that:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>anyone who needs to take action as part of the plan are aware</li>
+            <li>responsibilities are understood</li>
+            <li>access to playbooks and supporting documentation is accessible if  the IT system is disabled</li>
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}
