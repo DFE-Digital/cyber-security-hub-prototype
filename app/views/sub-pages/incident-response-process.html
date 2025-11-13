@@ -577,7 +577,7 @@
                     {% endcall %}
                 </div>
             </div>
-
+            <!-- DONE -->
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -693,7 +693,8 @@
                             accounts</li>
                         <li>any evidence preserved and how</li>
                     </ul>
-                    <p><a href="#" class="govuk-link">You can use our Incident Recovery Event Recording Form</a> to document all key events completed
+                    <p><a href="#" class="govuk-link">You can use our Incident Recovery Event Recording Form</a> to
+                        document all key events completed
                         throughout the stages of the Cyber Response Plan.</p>
 
                     {% endcall %}
@@ -704,7 +705,7 @@
 
                 </div>
             </div>
-
+            <!-- DONE -->
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -715,10 +716,142 @@
                 </div>
 
                 <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+                    <p>The purpose of the Eradication phase is to fully remove the root cause and residual components of
+                        a cyber security incident from affected systems, ensuring that it cannot reoccur through the
+                        same mechanism.   
+                        <br><br>
+                        As with other parts of the process, this may be carried out by IT Support or other third
+                        parties. The SLT Digital Lead remains responsible for ensuring that eradication is carried out
+                        as far as possible.  
+                        <br><br>
+                        This follows containment and precedes recovery, forming the bridge between tactical response and
+                        full restoration.  
+                    </p>
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Objectives of Eradication</h2>
+                    <p class="govuk-body">You should:</p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>identify and remove malware, unauthorised access methods, and compromised user accounts</li>
+                        <li>verify that any vulnerabilities exploited during the incident have been closed or mitigated
+                        </li>
+                        <li>remove persistence mechanisms such as backdoors, scheduled tasks or rogue admin tools</li>
+                        <li>document what has been done to support root cause analysis and post-incident review</li>
+                    </ul>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Good practice</h2>
+                    <p class="govuk-body">For most incidents, Eradication should not be delayed once containment is
+                        stable.
+                        <br><br>
+                        Though delays can increase risk of reinfection or exploitation, there may be circumstances such
+                        as collecting or preserving evidence that require appropriate actions before completing
+                        Eradication.
+                        <br><br>
+                        Ensure IT Support and SLT Digital Leads communicate regularly during this phase, especially
+                        where partial system reinstatement is being considered.  
+                        <br><br>
+                        Educational settings using third-party IT support must ensure they receive written confirmation
+                        that affected systems have been fully cleaned and secured against future attacks. The process of
+                        reducing vulnerability, known as “hardening”, helps minimise the attack surface – the number of
+                        ways a system can be exploited by malicious or accidental attack.   
+                        <br><br>
+                        The overall aim is to make it harder for anyone to exploit weaknesses and gain access to
+                        systems, data, or networks.
+                    </p>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Generic Eradication actions</h2>
+                    <p class="govuk-body">These actions are predominantly technical and therefore lie in the scope of IT
+                        Support actions, but the SLT Digital Leader or Incident Lead should oversee and support the
+                        process as needed. 
+                        <br><br>
+                        The following steps should be considered where relevant. Not all actions will apply in every
+                        case, but the checklist provides a structured approach to most likely scenarios.
+                    </p>
+
+                    <h3 class="govuk-heading-s">1. Reconfirm scope of affected systems</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>revalidate which systems, users, and networks were affected</li>
+                        <li>double-check logs and threat intelligence from reliable sources where available and relevant
+                            to ensure no systems were missed during containment</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">2. Remove malware or malicious artifacts</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>use up-to-date antivirus (AV) / endpoint detection and response (EDR) tools to perform deep
+                            scans</li>
+                        <li>delete or quarantine identified malware files</li>
+                        <li>remove malicious scripts, PowerShell commands or unauthorised binaries</li>
+                        <li>remove suspicious scheduled tasks, registry entries or run keys</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">3. Disable and replace compromised accounts</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>reset or disable any accounts suspected of compromise if not already completed during the
+                            Containment phase</li>
+                        <li>reissue credentials using strong password policies and if possible <a href="#"
+                                class="govuk-link">multi-factor
+                                authentication (MFA)</a></li>
+                        <li>audit recent activity from these accounts for signs of movement and resource access, where
+                            attackers could be navigating through compromised networks or systems in search of valuable
+                            data, higher privileges, or critical assets </li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">4. Patch and harden vulnerable systems</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>check for, and if necessary, apply missing security patches or configuration changes to
+                            remove the attacker’s access vector</li>
+                        <li>harden system configurations such as disabling SMBv1 and enforcing least privilege</li>
+                        <li>close any unnecessary firewall ports or disable unused services temporarily</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">5. Review and update security rules</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>adjust firewall, intrusion detection/prevention systems or filtering rules to block known
+                            indicators of compromise (IOCs)</li>
+                        <li>add newly discovered IOCs to email filters or endpoint protection blacklists</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">6. Clear temporary access or exceptions</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>remove any short-term workarounds created during the containment phase such as bypassed
+                            restrictions and emergency accounts</li>
+                        <li>document all changes and confirm their removal</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">7. Retest systems for clean status</h3>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>re-scan systems post-eradication</li>
+                        <li>use different tools or techniques than during initial scans to increase detection coverage
+                            if possible</li>
+                    </ul>
+
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Record keeping and handover</h2>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>log all eradication actions, including timestamps and who performed them</li>
+                        <li>update incident logs</li>
+                        <li>handover clean systems and provide a status report to the Cyber Recovery Team</li>
+                    </ul>
+                    {% endcall %}
+
 
                 </div>
             </div>
-
+            <!-- DONE -->
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -729,10 +862,113 @@
                 </div>
 
                 <div id="accordion-default-content-5" class="govuk-accordion__section-content">
+                    <p>The Recovery phase focuses on restoring affected systems, data, and services to normal operation
+                        in a secure and controlled manner. It ensures that systems are clean, properly configured, and
+                        monitored before returning to use.
+                        <br><br>
+                        Recovery also involves validating that vulnerabilities have been closed and confirming system
+                        integrity before resuming educational or administrative functions. 
+                        Do not rush system reintroduction, instead prioritise confidence in system integrity over speed.
+                        Where IT support is external, settings should request written assurance that systems are safe to
+                        resume operation.
+                        <br><br>
+                        The SLT Digital Lead should review restoration priorities to match setting’s operations and
+                        learning continuity needs.
+                    </p>
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Objectives of Recovery</h2>
+                    <p>Recovery aims to:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>restore systems from clean backups or rebuild them securely</li>
+                        <li>confirm that systems are fully operational and uncompromised</li>
+                        <li>reintroduce services in a staged and controlled manner</li>
+                        <li>monitor for signs of re-infection or ongoing attack</li>
+                        <li>communicate service restoration to staff and stakeholders appropriately</li>
+                    </ul>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Generic Recovery actions</h2>
+
+                    <h3 class="govuk-heading-s">1. System Restoration </h3>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>rebuild affected systems from known good images or reinstall the operating system where
+                            feasible</li>
+                        <li>restore essential data from secure, validated backups</li>
+                        <li>ensure restored systems are fully patched and up to date, <a href="#"
+                                class="govuk-link">referring to the DfE Cyber Security Standards</a></li>
+                        <li></li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">2. Integrity verification </h3>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>conduct full system scans using AV/EDR tools post-restoration</li>
+                        <li>validate key files, configurations, and applications are untampered</li>
+                        <li>use checksums or file integrity monitoring where available</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">3. Credential reset and access control review </h3>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>require password changes for affected users if not already carried out</li>
+                        <li>enforce MFA where supported, especially for admin or email accounts that have access to
+                            sensitive information such as financial or personal data</li>
+                        <li>review and adjust user permissions if accounts were escalated or misused</li>
+                        <li>refer to the<a href="#" class="govuk-link">DfE Cyber Security Standards</a> guidance on
+                            controlling and securing user accounts
+                            and access privileges</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">4. Controlled reintroduction of services </h3>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>bring systems back online in phases, not all at once</li>
+                        <li>prioritise essential educational or administrative services</li>
+                        <li>continue containment restrictions during phased return if needed such as outbound web
+                            traffic blocking and firewall rules</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">5. Testing and user validation </h3>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>perform basic system functionality checks</li>
+                        <li>ask key users to verify data accuracy and operational stability</li>
+                        <li>if appropriate, run "smoke tests" on critical systems, which are preliminary verifications
+                            of critical system functions such as disaster or system failure to ensure the system can be
+                            brought back up and operating at a minimum level</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">6. Monitoring for reinfection or anomalies</h3>
+                    <p>liaise with IT Support to investigate the possibility of increasing monitoring such as:</p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>increasing system and network monitoring during and after recovery</li>
+                        <li>tracking user activity logs, unusual access patterns, and performance anomalies</li>
+                        <li>maintaining heightened alerting for a defined post-recovery period, for example 7 to 14 days
+                        </li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s">7. Communicate service status</h3>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>inform staff and stakeholders which systems have been restored</li>
+                        <li>provide guidance on safe system use and any new procedures</li>
+                        <li>flag systems still under restoration or additional steps being taken</li>
+                    </ul>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Record keeping</h2>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>record all recovery activities with timestamps and responsible individuals</li>
+                        <li>include notes on which systems were rebuilt, restored, or retained</li>
+                        <li>log any user or stakeholder communications</li>
+                        <li>file this documentation for future audit or lessons learned review</li>
+                    </ul>
+
+                    {% endcall %}
 
                 </div>
             </div>
-
+            <!-- DONE -->
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -743,6 +979,259 @@
                 </div>
 
                 <div id="accordion-default-content-6" class="govuk-accordion__section-content">
+                    <p>This stage is a subset of Communications. The purpose of Notification is to ensure all relevant
+                        stakeholders are informed of the incident appropriately. This should be done in a timely manner
+                        and in compliance with legal, regulatory, contractual, and internal obligations.  </p>
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Objectives of Notification</h2>
+                    <p class="govuk-body">
+                        Recovery aims to:
+                    </p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>communicate clearly and promptly to those affected or required to take action</li>
+                        <li>comply with statutory notification requirements such as GDPR, DfE and, ICO)
+                        </li>
+                        <li>manage reputational risk through accurate and proportionate messaging</li>
+                        <li>provide transparency and accountability within the educational setting or trust</li>
+                    </ul>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Good Practice</h2>
+                    <p class="govuk-body">
+                        To ensure good practice you should: 
+                    </p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>use <a href="#" class="govuk-link">pre-approved templates</a> for notifications where
+                            available</li>
+                        <li>keep communications factual and neutral, avoid speculation or blame</li>
+                        <li>avoid unnecessary delay as timely notification may reduce impact, including reputational
+                            damage</li>
+                        <li>document the decision-making process and rationale for notifying or not notifying where
+                            there is uncertainty</li>
+                    </ul>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Roles and Responsibilities for Notification </h2>
+                    <p class="govuk-body">
+                        The SLT Digital Lead coordinates all communications and owns internal escalation decisions. 
+                        <br><br>
+                        The Cyber Recovery Team provides technical input on impact, scope, and mitigation that informs
+                        notifications. 
+                        <br><br>
+                        The DPO advises on data protection duties and manages ICO reporting.  
+                    </p>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Generic notification tasks</h2>
+
+                    {{ govukTable({
+                    caption: "Month you apply",
+                    captionClasses: "govuk-table__caption--m",
+                    firstCellIsHeader: true,
+                    head: [
+                    {
+                    text: "Task",
+                    classes: "app-custom-class"
+                    },
+                    {
+                    text: "Responsible Role(s)",
+                    classes: "app-custom-class"
+                    },
+                    {
+                    text: "Comments",
+                    classes: "app-custom-class"
+                    }
+                    ],
+                    rows: [
+                    [
+                    {
+                    text: "Assess whether notification is required"
+                    },
+                    {
+                    text: "SLT Digital Lead (IM), DPO, Headteacher, 
+                    IT/Cyber Team (IR)"
+                    },
+                    {
+                    text: "Based on data involved, severity, and scope"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Determine recipients"
+                    },
+                    {
+                    text: "SLT Digital Lead, Senior Leadership Team (SLT), DPO"
+                    },
+                    {
+                    text: "May include learners, staff, legal guardians/carers, governors, third parties, local
+                    authority"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Notify internal stakeholders"
+                    },
+                    {
+                    text: "SLT Digital Lead, SLT"
+                    },
+                    {
+                    text: "Examples include safeguarding, pastoral, HR, finance as applicable"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Notify external bodies "
+                    },
+                    {
+                    text: "DPO, Headteacher, IT/Cyber Team"
+                    },
+                    {
+                    text: "Examples include ICO, DfE, police, LA, insurers, IT vendors"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Notify affected individuals, such as data subjects"
+                    },
+                    {
+                    text: "DPO, SLT, Communications Lead"
+                    },
+                    {
+                    text: "May include letters, emails, phone calls, follow GDPR guidance"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Log all notifications"
+                    },
+                    {
+                    text: "SLT Digital Lead, IR Lead"
+                    },
+                    {
+                    text: "Include timestamp, method, message content, recipients"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Prepare public-facing messaging if required"
+                    },
+                    {
+                    text: "SLT, Communications Lead"
+                    },
+                    {
+                    text: "For press, website, social media if an incident escalates"
+                    }
+                    ]
+                    ]
+                    }) }}
+
+                    <p class="govuk-body">
+                        <a href="#" class="govuk-link">DfE Standards</a> require that any formal reporting to external
+                        bodies such as Action Fraud will
+                        need to be done by someone appointed by the SLT Digital Lead and involve the: 
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>SLT and headteacher or principal, who will approve a formal report and outline any impact on
+                            educational setting or college activity</li>
+                        <li>IT support team, who will investigate and resolve the issue</li>
+                        <li>DPO, who will establish whether a data breach has occurred</li>
+                        <li>designated safeguarding lead, who will review whether there are any safeguarding issues and
+                            related actions</li>
+                        <li>governors and trustees, who will need to be informed on the risk and the actions the
+                            educational setting or college are taking to resolve it </li>
+                    </ul>
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Legal & regulatory notification triggers</h2>
+
+                    {{ govukTable({
+                    caption: "Month you apply",
+                    captionClasses: "govuk-table__caption--m",
+                    firstCellIsHeader: true,
+                    head: [
+                    {
+                    text: "Requirement",
+                    classes: "app-custom-class"
+                    },
+                    {
+                    text: "Deadline",
+                    classes: "app-custom-class"
+                    },
+                    {
+                    text: "Trigger",
+                    classes: "app-custom-class"
+                    }
+                    ],
+                    rows: [
+                    [
+                    {
+                    text: "ICO (UK GDPR)"
+                    },
+                    {
+                    text: "Within 72 hours of becoming aware"
+                    },
+                    {
+                    text: "Personal data breach likely to result in risk to individuals’ rights and freedoms. The ICO
+                    have further guidance on when an incident should be reported"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Local Authority"
+                    },
+                    {
+                    text: "As soon as possible"
+                    },
+                    {
+                    text: "Depending on contractual obligations or funding arrangements"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Police or Action Fraud"
+                    },
+                    {
+                    text: "Immediate if applicable"
+                    },
+                    {
+                    text: "For cybercrime such as ransomware, hacking, financial fraud"
+                    }
+                    ],
+                    [
+                    {
+                    text: "Legal guardians/guardians"
+                    },
+                    {
+                    text: "Case-by-case basis"
+                    },
+                    {
+                    text: "When children’s data is involved or there is safeguarding impact"
+                    }
+                    ]
+                    ]
+                    }) }}
+
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Record keeping</h2>
+                    <p>Update the Incident Log to include:</p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>notification decision (who, when, why, how)</li>
+                        <li>copies of messages and emails sent</li>
+                        <li>confirmations of receipt if available</li>
+                        <li>records of advice received</li>
+                    </ul>
+
+                    {% endcall %}
+
 
                 </div>
             </div>
@@ -751,14 +1240,204 @@
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
                         <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
-                            Post Incident Review 
+                            Post Incident Review
                         </span>
                     </h2>
                 </div>
 
                 <div id="accordion-default-content-7" class="govuk-accordion__section-content">
+                    <p>The purpose of this stage is to evaluate the effectiveness of the incident response and
+                        management,
+                        identify lessons learned, and implement improvements that reduce the likelihood and impact of
+                        future
+                        incidents.</p>
+
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Objectives of Post-Incident Review</h2>
+
+                    <p class="govuk-body">The main objectives are to:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>Understand what happened and why</li>
+                        <li>Evaluate what worked well and what did not</li>
+                        <li>Improve incident response and management processes</li>
+                        <li>Update documentation, plans, and training as needed, including the Cyber Risk Assessment
+                        </li>
+                        <li>Demonstrate accountability and continuous improvement</li>
+                    </ul>
+
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Good practice</h2>
+                    <p class="govuk-body">To ensure good practice you should:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>Be open and honest in the review, focusing on learning and not blame</li>
+                        <li>Involve a wide enough group to gain varied perspectives and not just a cyber security view,
+                            such
+                            as SLT, service providers or representatives from staff and legal guardians</li>
+                        <li>Use a consistent structure or template for all incident reviews</li>
+                        <li>Track completion of follow-up actions in a central place such as using a risk register or
+                            improvement log</li>
+                        <li>Consider running simulations or training to address identified gaps</li>
+                    </ul>
+
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Roles and responsibilities – Post-Incident Review</h2>
+
+                    <p class="govuk-body">Roles and responsibilities involve the:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>SLT Digital Lead leading the review process and ensuring strategic and procedural issues are
+                            addressed</li>
+                        <li>IR Lead/technical team providing insight into root cause and the technical effectiveness of
+                            the
+                            response</li>
+                        <li>DPO and SLT contributing to policy and communication-related improvements</li>
+                    </ul>
+
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Generic Post-Incident Review Tasks</h2>
+
+                    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+                    {{ govukTable({
+                    firstCellIsHeader: true,
+                    head: [
+                    {
+                    text: "Task",
+                    classes: "app-custom-class"
+                    },
+                    {
+                    text: "Responsible Role(s)",
+                    classes: "app-custom-class"
+                    },
+                    {
+                    text: "Notes",
+                    classes: "app-custom-class"
+                    }
+                    ],
+                    rows: [
+                    [
+                    { text: "Schedule post-incident review meeting" },
+                    { text: "Other SLT, Headteacher/Principal, Governors/ Trustees" },
+                    { text: "Should occur within 5 to 10 working days of incident closure, normally in the completion of
+                    the recovery phase" }
+                    ],
+                    [
+                    { text: "Collate incident logs and evidence" },
+                    { text: "Cyber Recovery Team, IT Support, SLT Digital Lead" },
+                    { text: "Include timelines, response steps and communication logs" }
+                    ],
+                    [
+                    { text: "Facilitate lessons learned session" },
+                    { text: "SLT Digital Lead, IR Lead" },
+                    { text: "Include all relevant internal stakeholders such as IT, SLT and DPO" }
+                    ],
+                    [
+                    { text: "Document root cause and contributing factors" },
+                    { text: "IR Lead, IT Team" },
+                    { text: "Use available technical and procedural evidence" }
+                    ],
+                    [
+                    { text: "Assess timeline of detection, escalation, containment, and recovery" },
+                    { text: "SLT Digital Lead, Cyber Recovery Team" },
+                    { text: "Identify delays or inefficiencies" }
+                    ],
+                    [
+                    { text: "Review communications" },
+                    { text: "SLT Digital Lead, DPO, Principal/Headteacher SLT" },
+                    { text: "Evaluate internal and external messaging effectiveness" }
+                    ],
+                    [
+                    { text: "Identify any policy or procedure gaps" },
+                    { text: "SLT Digital Lead, Cyber Recovery Team, SLT" },
+                    { text: "For staff, technical teams, or leadership, typically relating to cyber security training or
+                    awareness that includes planning, but may affect broader areas such as IT training" }
+                    ],
+                    [
+                    { text: "Write up formal incident review report" },
+                    { text: "SLT Digital Lead, IR Lead, DPO" },
+                    { text: "Should be tailored to the SLT or any other requesting party and must include a timeline,
+                    impacts, lessons learned, and recommendations, with content appropriate to the setting and the
+                    nature and severity of the incident" }
+                    ],
+                    [
+                    { text: "Present report to leadership/governing body" },
+                    { text: "Headteacher, SLT Digital Lead" },
+                    { text: "If the incident was high impact or externally reportable" }
+                    ],
+                    [
+                    { text: "Implement agreed follow-up actions" },
+                    { text: "SLT Digital Lead, Cyber Recovery Team, Other stakeholders as directed by SLT" },
+                    { text: "Set deadlines and assign responsibility" }
+                    ],
+                    [
+                    { text: "Update the Cyber Security Incident Response and playbooks if required" },
+                    { text: "SLT Digital Lead, IR Lead" },
+                    { text: "Ensure future incidents benefit from the review" }
+                    ]
+                    ]
+                    }) }}
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Review report components</h2>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>IT Support</li>
+                        <li>DfE</li>
+                        <li>NCSC</li>
+                        <li>ICO</li>
+                        <li>Local authority</li>
+                    </ul>
+
+                    <p class="govuk-body">The written Post-Incident Review report should contain:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>Incident summary and timeline</li>
+                        <li>Impact assessment such as data, services, and people</li>
+                        <li>Root cause and contributing factors</li>
+                        <li>Actions taken during IR stages</li>
+                        <li>Effectiveness of communications and decision-making</li>
+                        <li>Lessons learned</li>
+                        <li>Recommendations for changes such as processes, policies, training and technical controls
+                        </li>
+                        <li>Assigned follow-up actions with owners and deadlines</li>
+                    </ul>
+
+                    {% endcall %}
+
+                    {% call blueContentBox() %}
+                    <h2 class="govuk-heading-m">Record keeping</h2>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>Completed Post-Incident Review report</li>
+                        <li>Updated IR/IM policies and procedures</li>
+                        <li>Action tracker or improvement log</li>
+                        <li>Evidence of appropriate briefings such as events informing staff/legal guardians and
+                            learners about the incident or the Cyber Recovery team briefing SLT on response
+                            effectiveness</li>
+                        <li>Evidence of communications, training or other actions delivered post-incident</li>
+                    </ul>
+
+                    <p class="govuk-body">
+                        Recording the above will demonstrate that your setting took appropriate action. This could be
+                        needed for compliance with cyber security standards, as well as evidence in legal or regulatory
+                        proceedings.
+                    </p>
+
+                    {% endcall %}
 
                 </div>
+
+
             </div>
 
 
