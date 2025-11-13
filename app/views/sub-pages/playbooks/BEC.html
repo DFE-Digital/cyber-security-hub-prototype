@@ -33,7 +33,8 @@ href:"/playbooks-landing-page"
 {
 text: "BEC Playbook "
 }
-]
+],
+"/public/images/bec-clear-background.png"
 ) }}
 {% endblock %}
 
@@ -61,7 +62,7 @@ text: "BEC Playbook "
             { text: "Immediate actions", href: "#actions" },
             { text: "Reporting", href: "#reporting" },
             { text: "Indicators of compromise", href: "#indicators" },
-            { text: "Containment ", href: "#containment" },
+            { text: "Containment", href: "#containment" },
             { text: "Recovery", href: "#recovery" },
             { text: "Post-Incident", href: "#post-incident" },
             { text: "Useful links", href: "#links" }
@@ -165,7 +166,6 @@ text: "BEC Playbook "
 
         <ol class="govuk-list govuk-list--number">
 
-            <!-- 1 -->
             <li class="govuk-body govuk-!-font-weight-bold">
                 Contact your Digital and Incident SLT to enact your setting’s Cyber Response Plan. If you do not have a
                 BEC specific plan, continue following this process.
@@ -175,91 +175,280 @@ text: "BEC Playbook "
                 </ol>
             </li>
 
-            <!-- 2 -->
             <li class="govuk-body govuk-!-font-weight-bold">
                 Isolate the affected accounts and/or devices.
-                <ol class="govuk-list govuk-list--alpha"> 
-                    <li>
-                        If you have identified which accounts have been compromised, isolate these accounts by (Please
-                        follow <a href="#" class="govuk-link">Microsoft guidance</a>):
-                        <ol class="govuk-list govuk-list--roman">
-                            <li>Restricting the ability to send emails (<a href="#" class="govuk-link">Outlook</a>) to
-                                prevent further spread and ensure email forwarding has not be set up</li>
-                            <li>Restrict any <a href="#" class="govuk-link">additional privileges</a < /li>
-                            <li>Forcefully disabling the user account</li>
-                            <ol class="govuk-list govuk-list--number">
-                                <li>This can be done by changing password and login authorisation </li>
-                            </ol>
-                            <li>If possible, forcefully <a href="#" class="govuk-link">sign-out of all active
-                                    sessions</a></li>
-                            <li>If your setting has multi-factor authentication (MFA) in place, ensure there are no
-                                unauthorised methods added to prevent reinfection </li>
+                <ol class="govuk-list govuk-list--alpha">
+                    <li>If you have identified which accounts have been compromised, isolate these accounts by (Please
+                        follow <a href="#" class="govuk-link">Microsoft guidance</a>)</li>
+                    <ol class="govuk-list govuk-list--roman">
+                        <li>Restricting the ability to send emails (<a href="#" class="govuk-link">Outlook</a>) to
+                            prevent further spread and ensure email forwarding has not be set up</li>
+                        <li>Restrict any <a href="#" class="govuk-link">additional privileges</a < /li>
+                        <li>Forcefully disabling the user account</li>
+                        <ol class="govuk-list govuk-list--number">
+                            <li>This can be done by changing password and login authorisation </li>
                         </ol>
-                    </li>
-
-                    <!-- 2b -->
-                    <li>
-                        If a specific device has been impacted (for example, a keylogger virus was installed), then
-                        disconnect the device from your settings network as soon as possible. 
-                        <ol class="govuk-list govuk-list--roman">
-                            <li>This can be by disabling the internet connection of the device or if not possible,
-                                disabling the wi-fi to completely isolate the device</li>
-                            <li>Scan the network using an anti-virus to ensure there are no persistent malware on your
-                                system</li>
-                        </ol>
-                    </li>
-
-                </ol>
+                        <li>If possible, forcefully <a href="#" class="govuk-link">sign-out of all active
+                                sessions</a></li>
+                        <li>If your setting has multi-factor authentication (MFA) in place, ensure there are no
+                            unauthorised methods added to prevent reinfection </li>
+                    </ol>
             </li>
 
-            <!-- 3 -->
-            <li class="govuk-body govuk-!-font-weight-bold">
-                Ensure that the integrity of your settings financial systems (e.g. payroll, HR) have not been severely compromised. This includes:
-                <ol class="govuk-list govuk-list--alpha">
-                    <li>Administrative accounts</li>
-                    <li>User payroll information</li>
-                    <li>Expected payment amounts</li>
+            <li>
+                If a specific device has been impacted (for example, a keylogger virus was installed), then
+                disconnect the device from your settings network as soon as possible. 
+                <ol class="govuk-list govuk-list--roman">
+                    <li>This can be by disabling the internet connection of the device or if not possible,
+                        disabling the wi-fi to completely isolate the device</li>
+                    <li>Scan the network using an anti-virus to ensure there are no persistent malware on your
+                        system</li>
                 </ol>
             </li>
 
         </ol>
+        </li>
+
+        <li class="govuk-body govuk-!-font-weight-bold">
+            Ensure that the integrity of your settings financial systems (e.g. payroll, HR) have not been severely
+            compromised. This includes:
+            <ol class="govuk-list govuk-list--alpha">
+                <li>Administrative accounts</li>
+                <li>User payroll information</li>
+                <li>Expected payment amounts</li>
+            </ol>
+        </li>
+        </ol>
+
 
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="reporting" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="reporting" class="govuk-heading-l">Reporting</h2>
         <p class="govuk-body">
-
+            All cyber incidents should be reported immediately to the relevant authority. As a ransomware incident has
+            likely resulted in some form of data breach, the following external supervisory authorities should be
+            informed: 
         </p>
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">Information Commissioners Office</a></h3>
+        <p>This must be done within 72 hours of becoming aware of your incident/data breach. 
+            <br><br>
+            This includes the nature of the breach, categories and number of individuals data that has been affected.
+        </p>
+
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">National cyber security centre (NCSC)</a></h3>
+        <p>If there is a clear danger to safeguarding for either staff members or leaners, please contact NCSC and fill
+            out the form.</p>
+
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">Local Police Authorities</a></h3>
+        <p>Please reach out to your local police authority if there is suspected clear financial or safeguarding impact.
+        </p>
+
+        <h3 class="govuk-heading-s"><a href="#" class="govuk-link">Action Fraud</a></h3>
+        <p>You can visit their website or call <span class="govuk-body govuk-!-font-weight-bold">0300 123 2040</span>
+        </p>
+
+        <h3 class="govuk-heading-s">DfE RPA Team</h3>
+        <p>
+            If you are a member of the RPA membership scheme, please contact the RPA Emergency Assistance Helpline by
+            emailing <a href="#" class="govuk-link">RPAresponse@CyberClan.com</a> or call <span
+                class="govuk-body govuk-!-font-weight-bold">0800 368 6378</span>.
+        </p>
+
+        <h3 class="govuk-heading-s">Service Providers</h3>
+        <p>If the breach has affected any third-party service/system, the service providers should be informed of the
+            attack and involved in a coordinated response to the incident. </p>
+
+        <h3 class="govuk-heading-s">Insurance Providers </h3>
+        <p>
+            If you are a member of a private insurance and cyber incidents are part of your coverage, please contact
+            them immediately. Dependant on your coverage, they may provide direct assistance in recovery. 
+
+            <br><br>
+            In the event your incident has been discovered and reported by a news media outlet, it is important that you
+            have assigned a staff member to co-ordinate communications in line with an approved post-disaster
+            communication plan. The staff media contact should only provide verifiable information, with no room for
+            speculation.  
+            <br><br>
+            For information that is still not known, it is justified to simply state “That is not known at this stage”.
+            Only the appointed staff media contact should communicate with the media, with all other staff refusing to
+            comment. 
+        </p>
+
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="containment" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="indicators" class="govuk-heading-l">Indicators of Compromise</h2>
         <p class="govuk-body">
-
+            The following are examples of an indicator of compromise (IOC) for a business email compromise: 
+            <br><br>
+            <span class="govuk-body govuk-!-font-weight-bold">Unusual emails/messages from Senior Leadership and
+                financial teams around financial requests.</span>
+            <br><br>
+            You should pay attention to:
         </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>changes in language, especially in tone and/or urgency</li>
+            <li>any requests to bypass normal procedures to access the finances in an insecure fashion.</li>
+        </ul>
+        <p>
+            You should always follow your settings financial processes and verify directly with a member of your
+            financial team
+            <br><br>
+            <span class="govuk-body govuk-!-font-weight-bold">Unusual payments made to unknown recipients.</span>
+            <br><br>
+            These may be: 
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>outside of your setting’s regular payment schedule or window</li>
+            <li>from trusted suppliers that have been compromised</li>
+        </ul>
+        <p>
+            You should always ensure all payments are verified with your SLT, the user requesting payment and financial
+            teams
+            <br><br>
+            <span class="govuk-body govuk-!-font-weight-bold">Unauthorised changes to payroll information.</span>
+            <br><br>
+            If a user has recently changed their payment information, verify these changes with the user prior to
+            sending any payments
+            <br><br>
+            Login attempts to accounts from outside of working hours and expected geolocations.  You should pay
+            attention to:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>log in attempts from countries that have no relation to your setting</li>
+            <li>users attempting to access their accounts whilst away, ensuring that any activity is verified directly
+                with the user</li>
+            <li>accounts being accessed outside of regular working hours, which may indicate malicious activity</li>
+        </ul>
+
+        <p>
+            <span class="govuk-body govuk-!-font-weight-bold">Multiple failed login attempts</span>
+            <br><br>
+            Users may sometime forget their logon information, so having a clear recovery process is important. 
+            <br><br>
+            If there are multiple consistent failed attempts, this may be an indication of a ‘brute force attack’, and
+            that account should be disabled/isolated ASAP 
+        </p>
+
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="recovery" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="containment" class="govuk-heading-l">Containment</h2>
+        <h3 class="govuk-heading-m">Containment Procedures</h3>
         <p class="govuk-body">
-
+            In the event a Business Email Compromise incident takes place, it is key to prioritise accounts and system
+            that may hold financial and/or personal information about people within your setting.
+            <br><br>
+            Verify that any accounts with key privileges are locked down and have not been infected. This can be done by
+            auditing account access, verifying that only the legitimate user has access to their account. 
+            <br><br>
+            If your setting uses <a href="#" class="govuk-link">Microsoft Defender for Endpoint</a>, <a href="#"
+                class="govuk-link">Microsoft Defender XDR</a> or Microsoft Defender
+            Antivirus, it is possible that the account has been contained automatically. This may have occurred due to
+            existing <a href="#" class="govuk-link">attack surface reduction rules</a> or <a href="#"
+                class="govuk-link">behavioural blocking</a>, as the account was displaying suspicious
+            behaviour. 
+            <br><br>
+            This can be manually done by further restricting the permissions of individual user accounts by doing the
+            following: 
         </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Disable the affected user account</li>
+            <li>If you are unable to disable the account, the next best option is to <a href="#"
+                    class="govuk-link">reset the password</a>.</li>
+            <li>Revoke user access</li>
+            <li>This can be done using <a href="#" class="govuk-link">Microsoft Entra ID</a>.</li>
+            <li>Review multi-factor authentication (MFA) registered devices</li>
+            <li>Review administrative roles assigned to the user</li>
+            <li>Review mail forwarders</li>
+        </ul>
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="post-incident" class="govuk-heading-l">Disclaimer</h2>
+        <h2 id="recovery" class="govuk-heading-l">Recovery</h2>
+        <h3 class="govuk-heading-m">Recovery Actions</h3>
         <p class="govuk-body">
-
+            Depending on what types of accounts your setting uses, there are multiple ways to recover a potentially
+            compromised account. 
+            <br><br>
+            Be sure to contact your service provider to see if they can assist in recovery, otherwise the account
+            provider should be contacted directly. 
+            <br><br>
+            Depending on your email account provider there will be specific actions to take. For example:
         </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Microsoft may have already locked the account for suspicious behaviour. If this has happened please
+                reach out to your service provider to unlock and secure the account, or reach out directly to
+                <a href="#" class="govuk-link">Microsoft</a>.
+            </li>
+            <li>If a user’s Google account has been locked, either through suspicious behaviour or the user has locked
+                it themselves, please contact your service provider or <a href="#" class="govuk-link">Google</a>.</li>
+        </ul>
         {% endcall %}
 
         {% call blueContentBox() %}
-        <h2 id="links" class="govuk-heading-l">Disclaimer</h2>
-        <p class="govuk-body">
-
+        <h2 id="post-incident" class="govuk-heading-l">Post-Incident</h2>
+        <h3 class="govuk-heading-m">Debrief</h3>
+        <p>
+            It is important that all members of staff involved in incident investigation, triaging, mitigation and
+            recovery undergo some form of interview and action review to ensure all the appropriate steps were taken to
+            mitigate the incident.
+            <br><br>
+            This includes communicating to all stakeholders internal to your setting (e.g. Digital Leader, Senior
+            Leadership, safeguarding officer), and external to your investigation if they have been impacted (e.g.
+            parent/learner data will require legal guardians to be informed “without undue delay” according to <a
+                href="#" class="govuk-link">GDPR</a>).
+            <br><br>
+            Ensure your incident review report is readable and concise to help present to senior leadership. It is key
+            to have full support in the actions taken during and post-incident as to prevent a ‘blame culture’ and
+            ensure that the right steps were taken.
+             <br><br>
+            It is important to remember that whilst the initial incident has been mitigated and system recovered, all
+            users and incident leader should remain vigilant and aware of possible future compromise. This should be
+            involved in any debriefs, training activities and lead to a review/update of your setting cyber response
+            plan and cyber risk assessment. 
         </p>
         {% endcall %}
+
+        <h2 id="links" class="govuk-heading-l">References/Useful Links</h2>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Business email compromise: defending your organisation - NCSC.GOV.UK
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Phishing attacks: defending your organisation - NCSC.GOV.UK
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Responding to a Compromised Email Account - Microsoft Defender for Office 365 |
+                Microsoft Learn
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                How to kill an active user session in Office 365 | Microsoft Learn
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                Revoke user access in an emergency in Microsoft Entra ID - Microsoft Entra ID | Microsoft Learn
+            </a>
+        </p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">
+                What to do in the event of Microsoft 365 account compromise | NCSC-FI
+            </a>
+        </p>
 
     </div>
 </div>
