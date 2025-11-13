@@ -1,0 +1,140 @@
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from "layouts/components/textonly-full-width-card.html" import textOnlyFullWidthCard %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- HERO BANNER -->
+{% block beforeContent %}
+{{ heroBanner(
+"/public/images/be-response-ready-grey-card.png",
+"Incident response",
+"Your incident response process begins before an incident and continues once the incident is resolved.  [SAMPLE]"
+) }}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "What you need to know",
+href: "/respond-to-attack-landing-page"
+},
+{
+text: "Incident response"
+}
+]
+}) }}
+{% endblock %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+
+{{ textOnlyFullWidthCard(
+  "",
+  "Incident-specific guidance",
+  "Use our playbooks to guide you through each stage of the response process.",
+  "sub-pages/preparing-for-incident",
+  "View guidance"
+) }}
+
+<h2> Incident management  </h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/preparing-for-cyber-incident-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/preparing-for-incident",
+"openInNewTab": false,
+"heading": "Preparing for a cyber incident",
+"description": "What you can do now to prepare for a quick, effective incident response."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/why-your-school-needs-a-plan-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/why-your-school-needs-a-plan",
+"openInNewTab": false,
+"heading": "Why your school needs a response plan",
+"description": "Support learners, staff, and meet your duties with a cyber response plan."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/roles-and-responsibilities-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/roles-and-responsibilities",
+"openInNewTab": false,
+"heading": "Cyber security roles and responsibilities",
+"description": "Find out who’s responsible for cyber security in your setting."
+}
+]
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2> Incident response</h2>
+
+{{ card({
+cards: [
+{
+"imageCard": true,
+"imagePath": "/public/images/response-process.png",
+"altText": "Incident response process",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/creating-cyber-response-plan",
+"openInNewTab": false,
+"heading": "Incident response process",
+"description": "Lorem Ipsum"
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/keeping-a-record-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/keeping-a-record",
+"openInNewTab": false,
+"heading": "Record keeping in an incident",
+"description": "Find out how clear documentation supports compliance and provides protection."
+},
+{
+"imageCard": true,
+"imagePath": "/public/images/Assessing-the-impact-card-image.png",
+"altText": "Sample Image",
+"headingLevel": "3",
+"linkCard": true,
+"link": "/sub-pages/assessing-the-impact",
+"openInNewTab": false,
+"heading": "Assess and document the incident’s impact",
+"description": "Determine your incident’s scope and choose an appropriate response."
+}
+]
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+{{ textOnlyFullWidthCard(
+  "",
+  "Incident-specific guidance",
+  "Use our playbooks to guide you through each stage of the response process.",
+  "/playbooks-landing-page",
+  "View the playbooks"
+) }}
+
+
+{% endblock %}

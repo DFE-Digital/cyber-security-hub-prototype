@@ -1,0 +1,27 @@
+{% macro textOnlyFullWidthCard(label, title, description, linkUrl, linkText="Find out more") %}
+<section class="dfe-text-only-card">
+  <div class="govuk-width-container">
+    <div class="dfe-text-only-card__inner">
+
+      {% if label %}
+        <p class="dfe-text-only-card__label">{{ label }}</p>
+      {% endif %}
+
+      {% if title %}
+        <h2 class="dfe-text-only-card__title">{{ title }}</h2>
+      {% endif %}
+
+      {% if description %}
+        <p class="dfe-text-only-card__description">{{ description }}</p>
+      {% endif %}
+        <br>
+      {% if linkUrl %}
+        <p class="dfe-text-only-card__more">
+          <a href="{{ linkUrl }}" class="dfe-text-only-card__link">{{ linkText }}</a>
+        </p>
+      {% endif %}
+      
+    </div>
+  </div>
+</section>
+{% endmacro %}
