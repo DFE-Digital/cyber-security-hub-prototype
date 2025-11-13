@@ -22,6 +22,69 @@
 // }
 
 
+.dfe-text-only-card {
+  margin-bottom: 2rem;
+}
+
+.dfe-text-only-card .govuk-width-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dfe-text-only-card__inner {
+  background: #f3f2f1; /* light grey */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* left align text */
+  text-align: left;
+}
+
+.dfe-text-only-card__label {
+  margin: 0 0 0.5rem 0;
+  color: #505a5f;
+  font-size: 1rem;
+}
+
+.dfe-text-only-card__title {
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0b0c0c;
+}
+
+.dfe-text-only-card__description {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #0b0c0c;
+  max-width: 50rem; /* prevents text from going too wide */
+}
+
+.dfe-text-only-card__more {
+  margin-top: 1rem;
+}
+
+.dfe-text-only-card__link {
+  font-weight: 600;
+  color: #1d70b8;
+  text-decoration: underline;
+}
+
+.dfe-text-only-card__link:hover {
+  color: #003078;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .dfe-text-only-card__inner {
+    padding: 1.5rem;
+  }
+}
+
+
 /* Make the container flex so cards line up side by side */
 .two-cards-full-width {
   display: flex;
@@ -162,86 +225,92 @@
   }
 }
 
-/* === DfE Full-width Card (50/50 layout, aligned within 3-column area) === */
 .dfe-full-width-card {
   margin-bottom: 2rem;
+}
 
-  .govuk-width-container {
-    padding-left: 0;
-    /* remove inner padding so image touches left edge of content area */
-    padding-right: 0;
-  }
+.dfe-full-width-card .govuk-width-container {
+  padding-left: 0;
+  /* remove inner padding so image touches left edge of content area */
+  padding-right: 0;
+}
 
-  &__inner {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    background: #f3f2f1;
-    /* light grey */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-  }
+.dfe-full-width-card__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: #f3f2f1; /* light grey */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
 
-  &__image {
-    flex: 1 1 60%;
-    min-height: 320px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.dfe-full-width-card__image {
+  flex: 1 1 60%;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  &__content {
-    flex: 1 1 50%;
-    background: #f3f2f1;
-    padding: 2.5rem;
-    display: flex;
+.dfe-full-width-card__content {
+  flex: 1 1 50%;
+  background: #f3f2f1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dfe-full-width-card__label {
+  margin: 0 0 0.5rem 0;
+  color: #505a5f;
+  font-size: 1rem;
+}
+
+.dfe-full-width-card__title {
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0b0c0c;
+}
+
+.dfe-full-width-card__description {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #0b0c0c;
+}
+
+.dfe-full-width-card__more {
+  margin-top: 1rem;
+}
+
+.dfe-full-width-card__link {
+  font-weight: 600;
+  color: #1d70b8;
+  text-decoration: underline;
+}
+
+.dfe-full-width-card__link:hover {
+  color: #003078;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .dfe-full-width-card__inner {
     flex-direction: column;
-    justify-content: center;
   }
 
-  &__label {
-    margin: 0 0 0.5rem 0;
-    color: #505a5f;
-    font-size: 1rem;
+  .dfe-full-width-card__image,
+  .dfe-full-width-card__content {
+    flex: 1 1 100%;
   }
 
-  &__title {
-    margin: 0 0 1rem 0;
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  &__link {
-    color: #1d70b8;
-    text-decoration: underline;
-  }
-
-  &__link:hover {
-    color: #003078;
-  }
-
-  &__description {
-    margin: 0;
-    font-size: 1.125rem;
-    color: #0b0c0c;
-  }
-
-  @media (max-width: 900px) {
-    &__inner {
-      flex-direction: column;
-    }
-
-    &__image,
-    &__content {
-      flex: 1 1 100%;
-    }
-
-    &__content {
-      padding: 1.5rem;
-    }
+  .dfe-full-width-card__content {
+    padding: 1.5rem;
   }
 }
+
 
 
 .dfe-page-intro-banner {
