@@ -1,0 +1,6 @@
+{% macro greyInfoCard(iconPath, altText, bodyText) %}
+<div class="grey-info-card">
+  <img src="{{ iconPath }}" alt="{{ altText }}" class="grey-info-card__icon">
+  <p class="grey-info-card__text">{{ bodyText | safe }}</p>
+</div>
+{% endmacro %}
