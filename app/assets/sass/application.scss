@@ -22,6 +22,21 @@
 // }
 
 
+.print-button {
+  background-color: #1D70B8;        // main colour
+  border-color: #1D70B8;
+
+  // GOV.UK standard darker hover colour
+  &:hover {
+    background-color: darken(#1D70B8, 10%);
+    border-color: darken(#1D70B8, 10%);
+  }
+
+  &:focus {
+    // preserves GOV.UK focus style - no changes needed
+  }
+}
+
 .dfe-text-only-card {
   margin-bottom: 2rem;
 }
