@@ -1,0 +1,70 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"Cyber security: what you need to know and do",
+" ",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "What you can do now",
+href: "/protect-school-landing-page.html"
+},
+{
+text: "Printable resources",
+href: "/printables-landing-page"
+},
+{
+text: "Cyber security: what you need to know and do "
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>Actions to build cyber resilience</h2>
+        <p class='govuk-body-s'>This printable checklist can help you track the tasks needed to protect your school against cyber attacks. </p>
+        {% endcall %}
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <button type="button" class="govuk-button print-button" onclick="window.open('/public/images/checklist.pdf', '_blank');"
+            data-module="govuk-button">
+
+            <svg class="govuk-!-margin-right-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M6 9V2h12v7h2v7h-4v4H8v-4H4V9h2zm2-5v5h8V4H8zm8 12H8v2h8v-2z" />
+            </svg>
+
+            Print poster
+        </button>
+
+    </div>
+</div>
+
+
+{% endblock %}
