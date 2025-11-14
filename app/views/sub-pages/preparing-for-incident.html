@@ -13,24 +13,20 @@
 
 
 {% block beforeContent %}
+
 {{ pageIntroBanner(
 "Preparing for a cyber incident",
-" ",
+"",
 [
-{
-text: "Home",
-href: "/home.html"
-},
-{
-text: "What you need to know",
-href: "/respond-to-attack-landing-page"
-},
-{
-text: "Preparing for a cyber incident"
-}
-]
+{ text: "Home", href: "/home.html" },
+{ text: "What you need to know", href: "/respond-to-attack-landing-page.html" },
+{ text: "Incident management and response", href: "/incident-response-landing-page" },
+{ text: "Preparing for a cyber incident" }
+],
+""
 ) }}
 {% endblock %}
+
 
 
 
@@ -40,9 +36,195 @@ text: "Preparing for a cyber incident"
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> </p>
+        <h2 class="govuk-heading-m">Planning for resilience with a Cyber Response Plan</h2>
 
-        <h2 class="govuk-heading-m"> </h2>
+        <p>Education settings should be prepared to respond swiftly and effectively to cyber security incidents. A
+            critical document that can help build resilience is your Cyber Response Plan (CRP). A CRP is a tactical
+            document that coordinates all response activities the process your organisation should follow in the event
+            of a suspected incident. 
+            <br><br>
+            The DfE provides a CRP template alongside guidance on how to tailor the CRP to best meet your setting’s
+            needs. If you already have a CRP in place, you can use the guidance to review the content in your existing
+            plan.  
+            <br><br>
+            It’s also good practice to have a Cyber Security Incident Management Policy (CSIMP), a strategic document
+            that covers the management of cyber security incidents and sets the high-level approach, including roles and
+            responsibilities. You may already have a generic Incident Policy or Disaster Recovery Plan which includes
+            cyber security incidents in place.  
+        </p>
+
+        <h2 class="govuk-heading-m">Tailoring your response plan</h2>
+
+         <p>
+            It is essential that every organisation tailors its CRP to its own context, requirements, and capabilities.
+            A
+            plan that is too generic or vague risks missing critical actions, leaving responders uncertain about what to
+            do
+            if when an incident occurs. If a plan is over-engineered or has been duplicated from another organisation,
+            it
+            risks becoming complex or unrealistic. 
+            <br><br>
+            A successful CRP should be detailed enough to guide a confident and coordinated response, yet practical and
+            aligned with the organisation’s structure, resources, and ways of working.  
+        </p>
+        <h2 class="govuk-heading-m">Involve the right people</h2>
+        <p>
+            IT staff, senior leaders, HR and communications teams and key suppliers or IT support providers should be
+            involved in the plan preparation. Senior leadership will support the plan and understand its implications,
+            especially when serious disruption or reputational harm is possible. This support will be documented in the
+            CSIMP.  
+            <br><br>
+            You can find further guidance in the <a href="#" class="govuk-link">cyber security standards for schools and
+                colleges</a>.
+        </p>
+        <h2 class="govuk-heading-m">Be aware of other plans</h2>
+        <p>
+            To ensure responses are integrated and consistent, you should link your incident response documents to any
+            existing plans, policies and procedures, such as your:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Disaster Recovery Plan for technical recovery</li>
+            <li>Business Continuity Plan for maintaining the delivery of education</li>
+            <li>Safeguarding policy for incidents involving learners or child protection</li>
+            <li>Data Protection Policy for incidents involving the potential loss of personal information</li>
+            <li>Backup Policy to outline your backup procedure and potential scenarios</li>
+            <li>Communication Strategy to know who should be contacted first and potentially how to handle communication
+                with a hacker</li>
+            <li>Service Level Agreements that show agreements with IT or other key service providers</li>
+            <li>Acceptable Use Policy to provide guidance to users</li>
+        </ul>
+        <p>
+            The digital and technology standards provide <a href="#" class="govuk-link">
+                further guidance on disaster recovery and business continuity
+                plans</a>.  
+        </p>
+        <h2 class="govuk-heading-m">Know your legal duties</h2>
+
+        <p>Your plan should include a brief guide to any legal or regulatory reporting requirements such as to the
+            Information Commissioner’s Office or the DfE. This should be proportionate to the type and volume of
+            personal or sensitive data held and the scale of the potential incident.   
+             </p>
+
+        <h2 class="govuk-heading-m">Important foundations of incident response planning</h2>
+        <p>Our cyber response guidance provides technical assistance in responding to incidents as they occur. The
+            response process is underpinned by the foundational incident management activities listed below.</p>
+
+        <h2 class="govuk-heading-m">Define roles and responsibilities</h2>
+        <p>
+            Clear roles should be assigned to each person who will be involved in responding to the plan. This includes
+            assigning an Incident Lead and decision-makers in relevant areas such as IT, facilities and safeguarding.  
+            <br><br>
+            The roles should be understood, documented, and supported with training where necessary. Deputies should be
+            named in the event of absence, with all contact details kept up to date.   
+            <br><br>
+            You should begin by establishing a Cyber Recovery Team led by a SLT Digital Lead.
+        </p>
+
+        <h2 class="govuk-heading-m">SLT Digital Lead</h2>
+        <p>
+            The SLT Digital Lead is the educational setting’s responsible stakeholder for overseeing the management of
+            cyber security incidents and owning incident management.  
+            <br><br>
+            Depending on the context in each educational setting, the SLT Digital Lead may delegate responsibility for
+            cyber security incident management. This role is concerned with leadership and management of incidents, not
+            necessarily the technical responsibilities.  
+            <br><br>
+            Key responsibilities are to:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>lead and coordinate the CRP ensuring timely delegation of tasks and appropriate escalation</li>
+            <li>act as the single point of contact for incident management decisions and includes reporting to senior
+                management</li>
+            <li>liaise with IT support and others to ensure appropriate response tasks are initiated and monitored as
+                directed by the CRP or playbook</li>
+            <li>activate and oversee the Cyber Recovery Team as required by the type and severity of the incident</li>
+            <li>lead Post-Incident Review activities to ensure any issues are identified and lessons learnt are
+                integrated into cyber security policy or plan updates and other documents such as cyber risk assessments
+            </li>
+            <li>maintain linkage between key stakeholders such as the Cyber Recovery Team, IT support and Designated
+                Safeguarding Lead</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Cyber Recovery Team</h2>
+        <p>
+            The Cyber Recovery Team is a multi-disciplinary group of key personnel, coordinated by the SLT Digital Lead.
+            They are responsible for carrying out technical and non-technical response activities.  
+            <br><br>
+            Key roles within your organisation that should be aware and involved are:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>SLT Digital Lead</li>
+            <li>Incident Lead as appropriate for your setting</li>
+            <li>Technical stakeholders such as your IT team and managed provider Stakeholders</li>
+            <li>IT team</li>
+            <li>ICT Managed Provider</li>
+            <li>Data Protection Officer (DPO)</li>
+            <li>Designated Safeguarding Lead</li>
+            <li>Senior Leadership Team (SLT)</li>
+            <li>Communications Lead</li>
+            <li>Legal/Governance Lead if applicable</li>
+        </ul>
+        <p>
+            In smaller settings it is likely that individuals will carry out multiple roles which should be assigned to
+            fit your setting’s requirements. The NCSC advise that a setting should always consider the risk of
+            individuals being unavailable and to include at least two contact methods for two or more individuals.  
+            <br><br>
+            Depending on the impact and resulting damages of an incident occurring, parties outside of your education
+            setting may have to become involved, which may include:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>your IT provider</li>
+            <li>your insurance provider </li>
+            <li>Information Commissioner’s Office (ICO)</li>
+            <li>NCSC</li>
+            <li>legal guardians</li>
+            <li>local police</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Communicate</h2>
+        <p>
+            Alongside helping you respond effectively, communicating with the CRT and relevant stakeholders will help
+            protect your setting’s infrastructure, data and reputation. You can find guidance on communicating
+            externally in [x]. 
+            <br><br>
+            The SLT Digital Lead will oversee communications but may delegate responsibilities to others depending on
+            the size of setting.  
+            <br><br>
+            Preplanning internal communications in the event of an incident should include identifying what
+            communications are likely to be necessary before, during and after a significant cyber security incident.   
+            <br><br>
+            Being prepared will help the education setting conduct effective and timely communications, providing
+            reassurance both internally and externally. The NCSC has produced <a href="#" class="govuk-link">guidance to
+                help education settings manage
+                their communications strategy</a> before, during and after a cyber security incident.    
+        </p>
+
+        <h2 class="govuk-heading-m">Empower</h2>
+        <p>
+            <span class="govuk-body govuk-!-font-weight-bold">Set escalation criteria</span>
+            <br><br>
+            You should define what types of incidents must be escalated to senior leaders and how quickly, using the
+            impact on learning, safeguarding, data security or operational continuity to determine severity. This also
+            includes contacting the RPA if a setting is part of the scheme.  
+             <br><br>
+            <span class="govuk-body govuk-!-font-weight-bold">Use playbooks and check authorisations</span> 
+            <br><br>
+            As part of your CRP preparation, you should create and maintain playbooks for common incidents such as
+            phishing, ransomware, and data loss.  
+             <br><br>
+            Relevant staff should know how to access the playbooks and have awareness of who can authorise key actions,
+            such as disabling systems and notifying relevant third parties. Suppliers should also be made aware of these
+            authorisations.  
+             <br><br>
+            <span class="govuk-body govuk-!-font-weight-bold">Swift containment</span>  
+             <br><br>
+            You should define where IT Support can be granted the permission to act without authorisation to reduce risk
+            and likely impact, such as disconnecting systems to prevent spread. 
+        </p>
+
+
 
 
 
