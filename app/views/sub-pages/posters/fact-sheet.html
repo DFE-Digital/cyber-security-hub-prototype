@@ -1,0 +1,155 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{% extends "layouts/main.html" %}
+{% from "layouts/components/hero-banner.html" import heroBanner %}
+{% from "layouts/components/full-width-card.html" import fullWidthCard %}
+{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+{% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
+{% from "layouts/components/blue-content-box.html" import blueContentBox %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ pageIntroBanner(
+"Cyber security: what you need to know and do",
+" ",
+[
+{
+text: "Home",
+href: "/home.html"
+},
+{
+text: "What you can do now",
+href: "/protect-school-landing-page.html"
+},
+{
+text: "Printable resources",
+href: "/printables-landing-page"
+},
+{
+text: "Cyber security: what you need to know and do "
+}
+]
+) }}
+{% endblock %}
+
+
+
+<!-- body content  -->
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>Facts and figures </h2>
+        <ol class="govuk-list govuk-list--bullet">
+            <li>6 out of 10 secondary schools had a cyber attack or breach in the past 12 months</li>
+            <li>fewer than 40% of schools have a cyber incident response plan</li>
+            <li>under a quarter of schools use multi-factor authentication (MFA) on their supported cloud services - MFA
+                is one of the simplest protections</li>
+            <li>23% of incidents were caused by poor data protection practices</li>
+        </ol>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <p class='govuk-body-s'>Sources: Official Statistics, Cyber security breaches survey 2025: education
+            institutions findings (19 June 2025), Secure Schools, “The State of School Cybersecurity 2025”, Information
+            Commissioner’s Office, “Insider threat of students leading to increasing number of cyber attacks in schools”
+            (11 September 2025) </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>Your responsibilities</h2>
+        <p>Everyone in your school should understand how and why to:</p>
+        <ol class="govuk-list govuk-list--bullet">
+            <li>recognise threats like phishing emails and ransomware  </li>
+            <li>create strong, unique passwords</li>
+            <li>only using approved software and services</li>
+            <li>follow cyber security policies</li>
+            <li>raise any concerns</li>
+        </ol>
+        <p>Make sure you know who needs to be involved in a cyber attack response, and their responsibilities. There’s
+            information on our website about who does what, and how to include that in your plan. </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>How we can help</h2>
+        <p>The Department for Education cyber security hub (URL) has information to help you with everything mentioned
+            here. Visit our website to find: </p>
+        <ol class="govuk-list govuk-list--bullet">
+            <li>support to help you make sure you're prepared for an attack</li>
+            <li>guidance on how to respond to specific incidents</li>
+            <li>printable posters to raise cyber security awareness</li>
+            <li>recommended schemes and initiatives to increase your security</li>
+        </ol>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <p>
+            "We followed our crisis management policy, but you need to make sure you know how you would react. For
+            example, if an incident were to occur on Christmas day - what would you do?" <br><br><span
+                class="govuk-body govuk-!-font-weight-bold"> - Educational trust chief executive </span></p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>Case study</h2>
+        <p>
+            An academy trust in England with over 6000 pupils and 800 staff experienced an incident in September 2024.
+            <br><br>
+            The school’s network supplier identified a large spike in bandwidth. The issue was identified as ransomware.
+            Around 2 million files and 2 terabytes of data were taken, including names, addresses, national insurance
+            numbers and possible bank details. Everything connected to the system was considered infected or
+            compromised. This included catering, costing the Trust £10,000 a day to feed children unable to access
+            digital payment systems.
+            <br><br>
+            Learning was significantly impacted, particularly for 1,500 students working towards exams. Lost data
+            included coursework and assignments.
+            <br><br>
+            The Trust had a cyber response plan, which they followed immediately. They also had cyber risk cover that
+            gave them access to specialists who helped with the response.
+            <br><br>
+            The total estimated cost of damages was £1 million.
+            <br><br>
+            Since the incident, the Trust has enhanced their log in security, implemented two-factor authentication and
+            revised their password policy. Attitudes and perceptions have also changed, and they recognise cyber
+            security measures are critical to have in place.
+        </p>
+        {% endcall %}
+
+        {% call blueContentBox() %}
+        <h2 class='govuk-heading-m'>Things you can do now</h2>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>implement multi-factor authentication</li>
+            <li>think about how your back up your information</li>
+            <li>start creating a cyber response plan</li>
+            <li>raise awareness in your school</li>
+            <li>read the Department for Education cyber standards</li>
+            <li>be clear on who is responsible for what when it comes to cyber security in your school</li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <p>
+            “I strongly believe actions and advise should be focussed on being prepared and being ready to respond to
+            when an attack happens.” <br><br><span class="govuk-body govuk-!-font-weight-bold"> - Educational trust IT
+                and data lead </span></p>
+        {% endcall %}
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <button type="button" class="govuk-button print-button" onclick="window.open('/public/images/fact-sheet.pdf', '_blank');"
+            data-module="govuk-button">
+
+            <svg class="govuk-!-margin-right-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M6 9V2h12v7h2v7h-4v4H8v-4H4V9h2zm2-5v5h8V4H8zm8 12H8v2h8v-2z" />
+            </svg>
+
+            Print this page
+        </button>
+
+    </div>
+</div>
+
+
+{% endblock %}
