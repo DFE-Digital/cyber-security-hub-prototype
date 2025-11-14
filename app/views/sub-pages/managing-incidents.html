@@ -5,6 +5,7 @@
 {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
 {% from "layouts/components/page-intro-banner.html" import pageIntroBanner %}
 {% from "layouts/components/blue-content-box.html" import blueContentBox %}
+{% from "layouts/components/grey-info-card.html" import greyInfoCard %}
 
 {% block pageTitle %}
 {{ serviceName }} – GOV.UK Prototype Kit
@@ -33,9 +34,91 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body"> </p>
+        <p class="govuk-body">The cyber security terms incident management and incident response are often used
+            interchangeably, however there are significant differences between the two. </p>
+        {{ greyInfoCard(
+        "/public/images/management-icon.png",
+        "Management icon",
+        "Incident <strong>management</strong>: how an organisation handles and manages a cyber incident to achieve the
+        best possible outcome."
+        ) }}
 
-        <h2 class="govuk-heading-m"> </h2>
+        {{ greyInfoCard(
+        "/public/images/response-icon.png",
+        "Management icon",
+        "Incident <strong>response</strong>: the specific actions taken to analyse, contain, eradicate and recover from
+        an incident."
+        ) }}
+        <h2 class="govuk-heading-m">Incident management</h2>
+
+        <p>Incident management is owned and managed by the Senior Leadership Team (SLT) Digital Lead. Alongside managing
+            any incident response actions carried out by others, incident management includes:</p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>all communications</li>
+            <li>any media handling</li>
+            <li>escalations</li>
+            <li>reporting issues</li>
+        </ul>
+
+        <p>
+            The pulling of the whole response together in a coherent and holistic way is part of incident management.
+        </p>
+
+        <h2 class="govuk-heading-m">Incident response </h2>
+        <p>
+            Incident response is coordinated by the SLT Digital Leader, who assigns response actions to various
+            individuals depending on the size and nature of their school. This includes:  
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>triage</li>
+            <li>in-depth analysis</li>
+            <li>technical recovery actions</li>
+        </ul>
+
+        <p>Incident response tasks may be assigned to:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Technical IT Staff or Managed Service Providers</li>
+            <li>Data Protection Officers</li>
+            <li>Designated Safeguarding Leads</li>
+            <li>Headteachers or other SLT staff</li>
+            <li>Communications or PR Leads</li>
+            <li>Facilities or Site Managers</li>
+            <li>Teaching Staff</li>
+            <li>Legal Advisors</li>
+        </ul>
+
+        <p>The types of tasks and a recommended process to follow are detailed in the <a href="#"
+                class="govuk-link">Cyber Security Incident Management
+                and Response Framework</a>.</p>
+
+        <h2 class="govuk-heading-m">Managing incidents with fully outsourced IT</h2>
+
+        <p>Where IT services are wholly delegated to a third-party provider, much or all the technical execution of the
+            Cyber Response Plan will fall under that provider’s contractual obligations.  
+            <br><br>
+            The educational setting will retain responsibility for:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>defining strategic direction and oversight through the Cyber Security Incident Management Policy  </li>
+            <li>creating and maintain the setting’s Cyber Response Plan with clear links and accountability for handover
+                of incident response tasks between the setting and the IT provider</li>
+            <li>ensuring the provider has an appropriate, tested Cyber Response Plan and can demonstrate compliance with
+                the educational setting’s statutory duties, such as safeguarding, UK GDPR and the DfE Cyber Security
+                Standards</li>
+            <li>the SLT, DPO, and safeguarding leads making decisions on regulatory reporting, such as to the
+                Information Commissioner’s Office (ICO) within 72 hours, alongside staff/parent communications and
+                liaison with governors/trustees </li>
+            <li>review and assurance, obtaining evidence from the provider of plan testing, incident handling capability
+                and regular updates to contacts and procedures</li>
+        </ul>
+
+        <p>
+            This will ensure that even where technical control sits externally, the accountability for governance,
+            compliance, and stakeholder communication remains with the educational setting.  
+        </p>
+
+
 
 
 
