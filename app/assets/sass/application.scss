@@ -21,6 +21,35 @@
 //   align-items: flex-start; // left-align contents
 // }
 
+.grey-info-card {
+  display: flex;
+  align-items: flex-start;
+  background: #f3f2f1; /* GOV.UK light grey */
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.grey-info-card__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.grey-info-card__text {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #0b0c0c;
+  line-height: 1.4;
+}
+
+/* Ensures it aligns neatly inside the GOV.UK two-thirds column */
+.govuk-grid-column-two-thirds .grey-info-card {
+  width: 100%;
+}
+
+
 
 .print-button {
   background-color: #1D70B8;        // main colour
